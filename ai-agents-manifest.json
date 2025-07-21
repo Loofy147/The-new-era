@@ -59,6 +59,11 @@
       "name": "ArchitectureDesignerAgent",
       "role": "Architecture Designer Agent",
       "description": "Plans high-level design patterns and scaling strategy."
+    },
+    {
+      "name": "PluginManager",
+      "role": "Plugin Manager",
+      "description": "Discovers and runs plugins."
     }
   ]
 }
