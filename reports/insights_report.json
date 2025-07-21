@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-01-21T10:34:00Z",
+  "generated_by": "InsightsBot",
+  "executive_summary": {
+    "overall_health": "healthy",
+    "total_agents": 9,
+    "active_services": 1,
+    "recent_activity": 15,
+    "key_concerns": [
+      "System health below optimal in some areas",
+      "2 high-priority security issues identified"
+    ]
+  },
+  "system_metrics": {
+    "system_health": {
+      "score": 85,
+      "status": "healthy",
+      "issues": [],
+      "last_check": "2025-01-21T10:34:00Z"
+    },
+    "file_metrics": {
+      "total_files": 45,
+      "python_files": 12,
+      "documentation_files": 8,
+      "configuration_files": 6,
+      "average_file_size": 156.7
+    },
+    "plugin_metrics": {
+      "total_plugins": 9,
+      "plugin_types": {
+        "agent": 9,
+        "service": 1,
+        "utility": 0
+      }
+    }
+  },
+  "key_insights": [
+    {
+      "category": "Architecture",
+      "insight": "System has 9 plugins, indicating good modularity",
+      "impact": "positive"
+    },
+    {
+      "category": "Development",
+      "insight": "45 files modified recently, showing active development",
+      "impact": "positive"
+    },
+    {
+      "category": "Services",
+      "insight": "System provides 3 API endpoints for external integration",
+      "impact": "positive"
+    }
+  ],
+  "recommendations": [
+    {
+      "category": "System Health",
+      "priority": "medium",
+      "action": "Increase documentation coverage",
+      "details": "Only 8 documentation files for 45 total files"
+    },
+    {
+      "category": "Security",
+      "priority": "high",
+      "action": "Address security vulnerabilities",
+      "details": "Multiple security issues identified by SecuBot"
+    }
+  ]
+}
