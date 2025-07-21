@@ -10,6 +10,11 @@ import uuid
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional, Union
 from contextlib import asynccontextmanager
+import sys
+import os
+
+# Add core orchestrator to path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core', 'orchestrator'))
 
 import uvicorn
 from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks, WebSocket, WebSocketDisconnect, status
@@ -27,6 +32,15 @@ from passlib.context import CryptContext
 import httpx
 from prometheus_client import Counter, Histogram, Gauge, generate_latest
 import structlog
+
+# Import orchestrator components
+from ai_orchestrator_architect import create_orchestrator
+from workflow_designer import create_workflow_designer
+from resource_manager import create_resource_manager
+from decision_engine import create_decision_engine
+from architecture_optimizer import create_architecture_optimizer
+from performance_analyzer import create_performance_analyzer
+from intelligence_coordinator import create_intelligence_coordinator
 
 # Configure structured logging
 logging.basicConfig(level=logging.INFO)
@@ -184,6 +198,35 @@ class MetricsResponse(BaseModel):
     active_agents_count: int
     system_health_score: float
 
+# Orchestrator Models
+class OrchestratorTaskRequest(BaseModel):
+    objective: str = Field(..., min_length=1, max_length=1000)
+    required_capabilities: List[str] = Field(default=[])
+    strategy: str = Field(default="hybrid")
+    priority: int = Field(default=3, ge=1, le=5)
+    timeout: int = Field(default=300, ge=30, le=3600)
+    context: Dict[str, Any] = Field(default={})
+
+class WorkflowRequest(BaseModel):
+    name: str = Field(..., min_length=1, max_length=100)
+    description: str = Field(..., max_length=500)
+    requirements: Dict[str, Any] = Field(default={})
+    constraints: Dict[str, Any] = Field(default={})
+
+class ResourceAllocationRequest(BaseModel):
+    requester_id: str = Field(..., min_length=1)
+    requirements: Dict[str, Any] = Field(...)
+    strategy: str = Field(default="priority_based")
+
+class PerformanceAnalysisRequest(BaseModel):
+    analysis_type: str = Field(default="real_time")
+    time_range_hours: int = Field(default=1, ge=1, le=168)
+    metrics: List[str] = Field(default=[])
+
+class IntelligenceCoordinationRequest(BaseModel):
+    task: Dict[str, Any] = Field(...)
+    agents: List[str] = Field(default=[])
+
 # WebSocket Connection Manager
 class ConnectionManager:
     def __init__(self):
@@ -315,15 +358,46 @@ async def collect_system_metrics():
         
         await asyncio.sleep(30)  # Collect every 30 seconds
 
+# Initialize Orchestrator Components
+orchestrator = None
+workflow_designer = None
+resource_manager = None
+decision_engine = None
+architecture_optimizer = None
+performance_analyzer = None
+intelligence_coordinator = None
+
 # Startup/Shutdown
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    global orchestrator, workflow_designer, resource_manager, decision_engine
+    global architecture_optimizer, performance_analyzer, intelligence_coordinator
+
     # Startup
     logger.info("Starting AI Operating System Backend API")
-    
+
+    # Initialize orchestrator components
+    try:
+        orchestrator = create_orchestrator()
+        workflow_designer = create_workflow_designer()
+        resource_manager = create_resource_manager()
+        decision_engine = create_decision_engine()
+        architecture_optimizer = create_architecture_optimizer()
+        performance_analyzer = create_performance_analyzer()
+        intelligence_coordinator = create_intelligence_coordinator()
+
+        # Start orchestrator services
+        await orchestrator.start()
+        await resource_manager.start()
+        await performance_analyzer.start_analysis()
+
+        logger.info("AI Orchestrator system initialized successfully")
+    except Exception as e:
+        logger.error("Failed to initialize orchestrator system", error=str(e))
+
     # Start background tasks
     asyncio.create_task(collect_system_metrics())
-    
+
     # Initialize default admin user if not exists
     db = SessionLocal()
     try:
@@ -340,11 +414,23 @@ async def lifespan(app: FastAPI):
             logger.info("Created default admin user")
     finally:
         db.close()
-    
+
     yield
-    
+
     # Shutdown
     logger.info("Shutting down AI Operating System Backend API")
+
+    # Stop orchestrator services
+    try:
+        if orchestrator:
+            await orchestrator.stop()
+        if resource_manager:
+            await resource_manager.stop()
+        if performance_analyzer:
+            await performance_analyzer.stop_analysis()
+        logger.info("AI Orchestrator system stopped")
+    except Exception as e:
+        logger.error("Error stopping orchestrator system", error=str(e))
 
 # FastAPI app
 app = FastAPI(
@@ -872,6 +958,284 @@ async def websocket_endpoint(websocket: WebSocket, user_id: str):
             await websocket.send_json({"type": "echo", "data": data})
     except WebSocketDisconnect:
         manager.disconnect(websocket, user_id)
+
+# Orchestrator Endpoints
+@app.post("/api/orchestrator/tasks")
+async def create_orchestrated_task(
+    task_request: OrchestratorTaskRequest,
+    current_user: User = Depends(get_current_user)
+):
+    """Create and execute an orchestrated task"""
+
+    if not orchestrator:
+        raise HTTPException(status_code=503, detail="Orchestrator service not available")
+
+    try:
+        task_id = await orchestrator.execute_task(
+            objective=task_request.objective,
+            required_capabilities=task_request.required_capabilities,
+            strategy=task_request.strategy,
+            priority=task_request.priority,
+            timeout=task_request.timeout,
+            context=task_request.context
+        )
+
+        logger.info("Orchestrated task created", task_id=task_id, user_id=current_user.id)
+
+        return {
+            "task_id": task_id,
+            "status": "created",
+            "objective": task_request.objective,
+            "estimated_duration": task_request.timeout
+        }
+    except Exception as e:
+        logger.error("Failed to create orchestrated task", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/tasks/{task_id}")
+async def get_orchestrated_task(
+    task_id: str,
+    current_user: User = Depends(get_current_user)
+):
+    """Get orchestrated task status and results"""
+
+    if not orchestrator:
+        raise HTTPException(status_code=503, detail="Orchestrator service not available")
+
+    try:
+        task_status = await orchestrator.get_task_status(task_id)
+        if not task_status:
+            raise HTTPException(status_code=404, detail="Task not found")
+
+        return task_status
+    except Exception as e:
+        logger.error("Failed to get task status", task_id=task_id, error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/orchestrator/workflows")
+async def create_workflow(
+    workflow_request: WorkflowRequest,
+    current_user: User = Depends(get_admin_user)
+):
+    """Create a new workflow template"""
+
+    if not workflow_designer:
+        raise HTTPException(status_code=503, detail="Workflow designer service not available")
+
+    try:
+        workflow_template = await workflow_designer.design_adaptive_workflow(
+            requirements=workflow_request.requirements,
+            constraints=workflow_request.constraints
+        )
+
+        workflow_template.name = workflow_request.name
+        workflow_template.description = workflow_request.description
+
+        workflow_designer.template_library.add_template(workflow_template)
+
+        logger.info("Workflow created", workflow_name=workflow_request.name, user_id=current_user.id)
+
+        return {
+            "workflow_name": workflow_request.name,
+            "status": "created",
+            "node_count": len(workflow_template.nodes),
+            "description": workflow_request.description
+        }
+    except Exception as e:
+        logger.error("Failed to create workflow", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/workflows")
+async def list_workflows(current_user: User = Depends(get_current_user)):
+    """List available workflow templates"""
+
+    if not workflow_designer:
+        raise HTTPException(status_code=503, detail="Workflow designer service not available")
+
+    try:
+        templates = workflow_designer.template_library.list_templates()
+        return {"workflows": templates}
+    except Exception as e:
+        logger.error("Failed to list workflows", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/orchestrator/resources/allocate")
+async def allocate_resources(
+    allocation_request: ResourceAllocationRequest,
+    current_user: User = Depends(get_current_user)
+):
+    """Allocate system resources"""
+
+    if not resource_manager:
+        raise HTTPException(status_code=503, detail="Resource manager service not available")
+
+    try:
+        allocation_ids = await resource_manager.allocate_resources(
+            allocation_request.requester_id,
+            allocation_request.requirements
+        )
+
+        logger.info("Resources allocated",
+                   requester_id=allocation_request.requester_id,
+                   allocations=allocation_ids)
+
+        return {
+            "allocation_ids": allocation_ids,
+            "status": "allocated",
+            "requester_id": allocation_request.requester_id
+        }
+    except Exception as e:
+        logger.error("Failed to allocate resources", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/resources/status")
+async def get_resource_status(current_user: User = Depends(get_current_user)):
+    """Get system resource status"""
+
+    if not resource_manager:
+        raise HTTPException(status_code=503, detail="Resource manager service not available")
+
+    try:
+        status = resource_manager.get_system_status()
+        return status
+    except Exception as e:
+        logger.error("Failed to get resource status", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/orchestrator/performance/analyze")
+async def analyze_performance(
+    analysis_request: PerformanceAnalysisRequest,
+    current_user: User = Depends(get_current_user)
+):
+    """Perform performance analysis"""
+
+    if not performance_analyzer:
+        raise HTTPException(status_code=503, detail="Performance analyzer service not available")
+
+    try:
+        from performance_analyzer import AnalysisType
+        analysis_type = AnalysisType(analysis_request.analysis_type)
+
+        report = await performance_analyzer.perform_analysis(analysis_type)
+
+        logger.info("Performance analysis completed",
+                   analysis_id=report.analysis_id,
+                   performance_score=report.performance_score)
+
+        return {
+            "analysis_id": report.analysis_id,
+            "analysis_type": report.analysis_type.value,
+            "performance_score": report.performance_score,
+            "bottlenecks": report.bottlenecks,
+            "recommendations": report.recommendations,
+            "alert_count": len(report.alerts)
+        }
+    except Exception as e:
+        logger.error("Failed to analyze performance", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/performance/insights")
+async def get_performance_insights(current_user: User = Depends(get_current_user)):
+    """Get performance insights and trends"""
+
+    if not performance_analyzer:
+        raise HTTPException(status_code=503, detail="Performance analyzer service not available")
+
+    try:
+        insights = await performance_analyzer.get_performance_insights()
+        return insights
+    except Exception as e:
+        logger.error("Failed to get performance insights", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/orchestrator/intelligence/coordinate")
+async def coordinate_intelligence(
+    coordination_request: IntelligenceCoordinationRequest,
+    current_user: User = Depends(get_current_user)
+):
+    """Coordinate intelligence across agents"""
+
+    if not intelligence_coordinator:
+        raise HTTPException(status_code=503, detail="Intelligence coordinator service not available")
+
+    try:
+        result = await intelligence_coordinator.coordinate_intelligence(coordination_request.task)
+
+        logger.info("Intelligence coordination completed",
+                   coordination_id=result["coordination_id"],
+                   status=result["status"])
+
+        return result
+    except Exception as e:
+        logger.error("Failed to coordinate intelligence", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/intelligence/patterns")
+async def get_coordination_patterns(current_user: User = Depends(get_current_user)):
+    """Get intelligence coordination patterns and insights"""
+
+    if not intelligence_coordinator:
+        raise HTTPException(status_code=503, detail="Intelligence coordinator service not available")
+
+    try:
+        patterns = await intelligence_coordinator.analyze_coordination_patterns()
+        return patterns
+    except Exception as e:
+        logger.error("Failed to get coordination patterns", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/architecture/optimize")
+async def optimize_architecture(current_user: User = Depends(get_admin_user)):
+    """Optimize system architecture"""
+
+    if not architecture_optimizer:
+        raise HTTPException(status_code=503, detail="Architecture optimizer service not available")
+
+    try:
+        from architecture_optimizer import OptimizationObjective
+        objectives = [
+            OptimizationObjective.PERFORMANCE,
+            OptimizationObjective.SCALABILITY,
+            OptimizationObjective.RELIABILITY
+        ]
+
+        optimization_report = await architecture_optimizer.optimize_architecture(objectives)
+
+        logger.info("Architecture optimization completed",
+                   overall_score=optimization_report["current_metrics"]["overall_score"])
+
+        return optimization_report
+    except Exception as e:
+        logger.error("Failed to optimize architecture", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/orchestrator/status")
+async def get_orchestrator_status(current_user: User = Depends(get_current_user)):
+    """Get overall orchestrator system status"""
+
+    try:
+        status = {
+            "orchestrator": orchestrator is not None,
+            "workflow_designer": workflow_designer is not None,
+            "resource_manager": resource_manager is not None,
+            "decision_engine": decision_engine is not None,
+            "architecture_optimizer": architecture_optimizer is not None,
+            "performance_analyzer": performance_analyzer is not None,
+            "intelligence_coordinator": intelligence_coordinator is not None,
+            "timestamp": datetime.utcnow()
+        }
+
+        # Get additional status information if services are available
+        if resource_manager:
+            status["resource_status"] = resource_manager.get_system_status()
+
+        if performance_analyzer:
+            status["performance_insights"] = await performance_analyzer.get_performance_insights()
+
+        return status
+    except Exception as e:
+        logger.error("Failed to get orchestrator status", error=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Health Check
 @app.get("/api/health")
