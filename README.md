@@ -16,43 +16,29 @@ Our goal is to:
 
 ---
 
-## 📁 Repository Structure (Overview)
+## 📁 Repository Structure
 
 ```bash
 repo-root/
-├── AGENTS.md                 # Standardized operational guidelines for all AI agents
-├── INSTRUCTIONS.md           # Main AI agent instruction guide
-├── README.md                 # Entry point (this file)
-├── code_of_conduct.md        # Code of Conduct
-├── contributing.md           # Contribution guidelines
-├── docs/                     # Design documents, evolution plans, audits
-├── prompts/                  # Base prompt context and role definitions
-├── protocols/                # LLM interaction protocols and collaboration rules
-└── ...
+├── ai-agents-manifest.json    # Machine-readable manifest of all agents
+├── cli/                     # Command-line tool (`aimos`).
+├── dashboard/               # React-based web UI.
+├── docs/                    # Design documents, evolution plans, audits
+├── infra/                   # Terraform and Kubernetes manifests.
+├── prompts/                 # Base prompt context and role definitions
+├── protocols/               # LLM interaction protocols and collaboration rules
+├── services/                # Core services for the AI Operating System
+├── shared/                  # Protobuf definitions, utility code.
+├── scripts/                 # Deployment and management scripts.
+├── tests/                   # Unit, integration, end-to-end tests.
+└── README.md                # Entry point (this file)
 ```
 
 ---
 
 ## 🧠 Included AI Agent Roles
 
-We provide an extensible list of **predefined roles** for AI-based tools/agents:
-
-| Role Name                       | Description                                            |
-| ------------------------------- | ------------------------------------------------------ |
-| **Cost Optimization Agent**     | Analyzes usage, suggests infra cost-saving changes.    |
-| **Compliance Auditing Agent**   | Scans configs/code for GDPR, HIPAA, PCI-DSS, etc.      |
-| **Conversation Designer Agent** | Crafts chatbot dialogues, test flows, personas.        |
-| **Refactoring Agent**           | Refactors AI code, tools, or workflows.                |
-| **Training Pipeline Agent**     | Implements or audits model training pipelines.         |
-| **LLM Evolver Agent**           | Suggests improvements to LLM logic over time.          |
-| **Testing Automation Agent**    | Builds and verifies tests for other agents.            |
-| **Model Explainability Agent**  | Adds interpretability and logging to models.           |
-| **Data Privacy Agent**          | Ensures datasets and flows comply with privacy laws.   |
-| **Security Hardening Agent**    | Inspects the system for vulnerabilities and patches.   |
-| **Analytics & Insights Agent**  | Gathers system KPIs, produces insights.                |
-| **Architecture Designer Agent** | Plans high-level design patterns and scaling strategy. |
-
-> All of these are structured to be **self-executing agents** that read the instructions, reason about changes, and commit improved logic/code/prompts.
+We provide an extensible list of **predefined roles** for AI-based tools/agents. For a complete list of agents and their roles, see [`ai-agents-manifest.json`](./ai-agents-manifest.json). For detailed instructions on how to interact with the agents, see [`docs/agents_and_instructions.md`](./docs/agents_and_instructions.md).
 
 ---
 
@@ -60,11 +46,13 @@ We provide an extensible list of **predefined roles** for AI-based tools/agents:
 
 If you're an AI model, tool, or developer:
 
-✅ Begin by reading [`INSTRUCTIONS.md`](./INSTRUCTIONS.md). This file defines:
+✅ Begin by reading [`docs/agents_and_instructions.md`](./docs/agents_and_instructions.md). This file defines:
 
 * How to reason about contributions
 * How to validate and document changes
 * How to operate as an agent and interact with others
+
+For more detailed contribution guidelines, see [`docs/contributing.md`](./docs/contributing.md).
 
 ---
 

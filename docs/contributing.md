@@ -178,4 +178,3 @@ Before merging a PR, update version in `package.json` and `cli/package.json`, an
 - For urgent issues, ping `@maintainers` in GitHub.
 
 Thank you for helping improve the AI-Model Marketplace OS! 🎉
-

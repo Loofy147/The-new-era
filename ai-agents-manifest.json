@@ -1,0 +1,64 @@
+{
+  "agents": [
+    {
+      "name": "CostOptBot",
+      "role": "Cost Optimization Agent",
+      "description": "Analyzes usage, suggests infra cost-saving changes."
+    },
+    {
+      "name": "ComplianceBot",
+      "role": "Compliance Auditing Agent",
+      "description": "Scans configs/code for GDPR, HIPAA, PCI-DSS, etc."
+    },
+    {
+      "name": "ConvDesignBot",
+      "role": "Conversation Designer Agent",
+      "description": "Crafts chatbot dialogues, test flows, personas."
+    },
+    {
+      "name": "ModelRefactor",
+      "role": "Refactoring Agent",
+      "description": "Refactors AI code, tools, or workflows."
+    },
+    {
+      "name": "TrainingPipelineAgent",
+      "role": "Training Pipeline Agent",
+      "description": "Implements or audits model training pipelines."
+    },
+    {
+      "name": "LLMEvolverAgent",
+      "role": "LLM Evolver Agent",
+      "description": "Suggests improvements to LLM logic over time."
+    },
+    {
+      "name": "TestGenie",
+      "role": "Testing Automation Agent",
+      "description": "Builds and verifies tests for other agents."
+    },
+    {
+      "name": "ModelExplainabilityAgent",
+      "role": "Model Explainability Agent",
+      "description": "Adds interpretability and logging to models."
+    },
+    {
+      "name": "PrivacyGuard",
+      "role": "Data Privacy Agent",
+      "description": "Ensures datasets and flows comply with privacy laws."
+    },
+    {
+      "name": "SecuBot",
+      "role": "Security Hardening Agent",
+      "description": "Inspects the system for vulnerabilities and patches."
+    },
+    {
+      "name": "InsightsBot",
+      "role": "Analytics & Insights Agent",
+      "description": "Gathers system KPIs, produces insights."
+    },
+    {
+      "name": "ArchitectureDesignerAgent",
+      "role": "Architecture Designer Agent",
+      "description": "Plans high-level design patterns and scaling strategy."
+    }
+  ]
+}
