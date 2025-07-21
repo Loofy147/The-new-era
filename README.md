@@ -1,102 +1,93 @@
-# AI-Model Marketplace OS
+# AI Operating System Framework
 
-A turnkey platform that hosts, orchestrates, and monetizes any machine learning model (LLMs, vision, speech, RL agents) as modular services. Users can mount models via a unified CLI/UI, pay per inference or subscription, and switch seamlessly between providers.
-
----
-
-## Features
-
-* **Unified API Gateway**: gRPC + REST façade for all models.
-* **Service Mesh**: Canary deployments, traffic shaping, and autoscaling with Istio.
-* **Containerized Model Sandboxes**: Secure, lightweight runtimes with Firecracker and cgroups.
-* **Real-Time Billing Engine**: Kafka-driven usage capture and billing microservice.
-* **CLI & Dashboard**: `aimos` CLI tool and React dashboard for management and insights.
-* **Ethics & Compliance**: Bias evaluation, GDPR consent flows, SOC 2/ISO 27001 readiness.
+Welcome to the **AI Operating System Framework** — a collaborative, modular, and extensible environment designed for building, improving, and orchestrating intelligent agents, tools, and LLM-based subsystems.
 
 ---
 
-## Repo Structure
+## 🚀 Purpose
+
+This repository acts as a **foundation for AI system composition**. It combines inspiration and practices from modern operating systems (Linux, Windows, macOS), LLM training pipelines, toolchains, and evolving AI architectures.
+
+Our goal is to:
+
+* Create a **well-structured AI platform** to support continuous development, collaboration, and extension.
+* Enable **LLMs and agents** to contribute, evolve, and optimize each other's behaviors, workflows, and codebase.
+* Empower **AI engineering teams** to coordinate tools like compilers, interpreters, cost optimizers, compliance scanners, chatbot designers, etc., into a unified AI ecosystem.
+
+---
+
+## 📁 Repository Structure (Overview)
 
 ```bash
-ai-model-marketplace-os/
-├── .github/              # CI/CD workflows and issue templates
-├── docs/                 # Phase docs (architecture, discovery, etc.)
-├── infra/                # Terraform configs and Kubernetes manifests
-├── services/             # Microservices: api-gateway, model-runner, billing-engine, event-bus
-├── cli/                  # CLI tool source and commands
-├── dashboard/            # React-based web dashboard
-├── shared/               # Proto definitions and shared utilities
-├── scripts/              # Deployment & model management scripts
-├── tests/                # Unit, integration, and E2E tests
-├── docker-compose.yml    # Local development orchestrator
-├── .env.example          # Environment variable template
-└── README.md             # This file
+repo-root/
+├── core/                      # Kernel-like logic and agent orchestration
+├── modules/                   # AI tools and agent modules
+│   ├── training/              # Training logic and protocol implementations
+│   ├── cost-optimization/     # Infrastructure analysis agents
+│   ├── compliance-auditing/   # Security & compliance checking agents
+│   └── conversation-design/   # Dialogue design and chatbot modeling tools
+├── prompts/                  # Base prompt context and role definitions
+├── protocols/                # LLM interaction protocols and collaboration rules
+├── docs/                     # Design documents, evolution plans, audits
+│   ├── INSTRUCTIONS.md       # Main AI agent instruction guide ✅
+│   └── ARCHITECTURE.md       # System architecture blueprint (WIP)
+├── README.md                 # Entry point (this file)
+└── .gitignore
 ```
 
 ---
 
-## Getting Started
+## 🧠 Included AI Agent Roles
 
-1. **Clone the repo**:
+We provide an extensible list of **predefined roles** for AI-based tools/agents:
 
-   ```bash
-   git clone https://github.com/your-org/ai-model-marketplace-os.git
-   cd ai-model-marketplace-os
-   ```
+| Role Name                       | Description                                            |
+| ------------------------------- | ------------------------------------------------------ |
+| **Cost Optimization Agent**     | Analyzes usage, suggests infra cost-saving changes.    |
+| **Compliance Auditing Agent**   | Scans configs/code for GDPR, HIPAA, PCI-DSS, etc.      |
+| **Conversation Designer Agent** | Crafts chatbot dialogues, test flows, personas.        |
+| **Refactoring Agent**           | Refactors AI code, tools, or workflows.                |
+| **Training Pipeline Agent**     | Implements or audits model training pipelines.         |
+| **LLM Evolver Agent**           | Suggests improvements to LLM logic over time.          |
+| **Testing Automation Agent**    | Builds and verifies tests for other agents.            |
+| **Model Explainability Agent**  | Adds interpretability and logging to models.           |
+| **Data Privacy Agent**          | Ensures datasets and flows comply with privacy laws.   |
+| **Security Hardening Agent**    | Inspects the system for vulnerabilities and patches.   |
+| **Analytics & Insights Agent**  | Gathers system KPIs, produces insights.                |
+| **Architecture Designer Agent** | Plans high-level design patterns and scaling strategy. |
 
-2. **Set up environment**:
-
-   * Copy `.env.example` to `.env` and fill in credentials.
-   * Ensure Docker, kubectl, and Terraform are installed.
-
-3. **Deploy locally**:
-
-   ```bash
-   docker-compose up --build
-   ```
-
-4. **Run tests**:
-
-   ```bash
-   npm test
-   ```
-
-5. **Development**:
-
-   * Services live-reload on code changes.
-   * Dashboard at `http://localhost:3000`.
-   * CLI commands via `npm run cli -- <command>`.
+> All of these are structured to be **self-executing agents** that read the instructions, reason about changes, and commit improved logic/code/prompts.
 
 ---
 
-## Folder Breakdown
+## 📘 Contribution
 
-Detailed explanation of major directories:
+If you're an AI model, tool, or developer:
 
-* **.github/**: CI/CD pipelines (`ci.yml`, `cd.yml`) and issue templates.
-* **docs/**: Documentation for each five-phase framework.
-* **infra/**: Infrastructure as code (Terraform + Kubernetes kustomize).
-* **services/**: Node.js microservices with Dockerfiles.
-* **cli/**: JavaScript CLI tool using Commander.js.
-* **dashboard/**: React app with Tailwind CSS.
-* **shared/**: Protocol buffer definitions and shared logger.
-* **scripts/**: Utility scripts for deployment and model registry.
-* **tests/**: Automated tests (unit, integration, e2e).
+✅ Begin by reading [`INSTRUCTIONS.md`](./docs/INSTRUCTIONS.md). This file defines:
+
+* How to reason about contributions
+* How to validate and document changes
+* How to operate as an agent and interact with others
 
 ---
 
-## Contributing
+## 🏗️ Future Extensions
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/my-feature`
-3. Commit changes: `git commit -m "feat: add my feature"`
-4. Push to branch: `git push origin feature/my-feature`
-5. Open a pull request.
-
-Please follow the [Code of Conduct](docs/code_of_conduct.md) and ensure all new features have tests.
+* Add a modular plugin system
+* Integrate vector search for prompt memory
+* Embed autonomous self-healing for agents
+* Extend to support voice and CLI agents
+* Incorporate multi-modal agent interoperability
 
 ---
 
-## License
+## 👨‍💻 Human Contributors
 
-This project is licensed under the [MIT License](LICENSE).
+Feel free to open issues, submit PRs, or build your own agents/modules. This system is designed to support **AI-human collaboration at scale**.
+
+---
+
+## 📜 License
+
+MIT
