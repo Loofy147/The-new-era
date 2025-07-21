@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-01-21T10:38:00Z",
+  "generated_by": "TestGenie",
+  "tests_found": 2,
+  "tests_passed": 0,
+  "tests_failed": 0,
+  "coverage_percentage": 15,
+  "components_analyzed": [
+    {
+      "file_path": "main.py",
+      "classes": [
+        {
+          "name": "AIOperatingSystem",
+          "methods": ["initialize", "run_agent", "run_all_agents"],
+          "line_number": 8
+        }
+      ],
+      "functions": [
+        {
+          "name": "main",
+          "args": [],
+          "line_number": 200
+        }
+      ],
+      "complexity_score": 25,
+      "test_file_exists": true
+    }
+  ],
+  "test_suggestions": [
+    "Implement unit tests for all agent classes",
+    "Add integration tests for agent interactions",
+    "Create performance tests for system execution",
+    "Implement end-to-end tests for complete workflows"
+  ],
+  "quality_metrics": {
+    "test_coverage_target": 80,
+    "current_coverage": 15,
+    "untested_components": 8,
+    "critical_paths_tested": false
+  }
+}
