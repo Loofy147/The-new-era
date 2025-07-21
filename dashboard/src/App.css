@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.ant-layout-sider-trigger {
+  background: #001529;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
+  background-color: #1890ff;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card-head-title {
+  font-weight: 600;
+}
+
+.recent-activity {
+  margin: 16px 0;
+}
+
+.recent-activity p {
+  margin: 8px 0;
+  padding: 8px;
+  background: #f6f8fa;
+  border-radius: 4px;
+  border-left: 4px solid #1890ff;
+}
+
+.quick-actions p {
+  margin: 8px 0;
+  padding: 8px;
+  background: #f0f9ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quick-actions p:hover {
+  background: #e0f2fe;
+}
+
+.agent-card {
+  margin-bottom: 16px;
+}
+
+.agent-status {
+  color: #52c41a;
+  font-weight: bold;
+}
+
+.report-item {
+  padding: 12px;
+  margin: 8px 0;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.report-item:hover {
+  background: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.settings-section {
+  margin: 16px 0;
+}
+
+.settings-item {
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 4px solid #722ed1;
+}
