@@ -1,1 +1,1 @@
-from .prompt_memory import PromptMemory
+from .simple_prompt_memory import PromptMemory
