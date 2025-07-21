@@ -23,7 +23,7 @@ import { apiService } from '../services/api';
 
 // Orchestrator Task Card Component
 const TaskCard = ({ task, onViewDetails }) => (
-  <div className="glass-card fade-in">
+  <div className="card fade-in">
     <div className="card-header">
       <div className="task-info">
         <h3 className="task-title">{task.objective}</h3>
@@ -68,7 +68,7 @@ const TaskCard = ({ task, onViewDetails }) => (
 
 // Resource Usage Component
 const ResourceUsage = ({ resources }) => (
-  <div className="glass-card">
+  <div className="card">
     <div className="card-header">
       <h3 className="card-title">Resource Utilization</h3>
       <ReloadOutlined className="reload-icon" />
@@ -105,7 +105,7 @@ const ResourceUsage = ({ resources }) => (
 
 // Performance Metrics Component
 const PerformanceMetrics = ({ metrics }) => (
-  <div className="glass-card">
+  <div className="card">
     <div className="card-header">
       <h3 className="card-title">Performance Analytics</h3>
       <span className={`performance-score ${
@@ -163,7 +163,7 @@ const PerformanceMetrics = ({ metrics }) => (
 
 // Intelligence Coordination Component
 const IntelligenceCoordination = ({ patterns }) => (
-  <div className="glass-card">
+  <div className="card">
     <div className="card-header">
       <h3 className="card-title">Intelligence Coordination</h3>
       <ClusterOutlined />
@@ -208,7 +208,7 @@ const IntelligenceCoordination = ({ patterns }) => (
 
 // Architecture Optimization Component
 const ArchitectureOptimization = ({ optimization }) => (
-  <div className="glass-card">
+  <div className="card">
     <div className="card-header">
       <h3 className="card-title">Architecture Optimization</h3>
       <BranchesOutlined />
