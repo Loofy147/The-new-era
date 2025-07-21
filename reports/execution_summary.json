@@ -1,0 +1,4270 @@
+{
+  "timestamp": "2025-07-21T19:06:21.910348",
+  "total_agents": 12,
+  "successful_agents": 11,
+  "failed_agents": 1,
+  "execution_details": {
+    "MultiModalBot": {
+      "status": "success",
+      "result": {
+        "status": "success",
+        "data": {
+          "modality_capabilities": {
+            "text": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            },
+            "image": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            },
+            "audio": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            },
+            "video": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            },
+            "json": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            },
+            "csv": {
+              "processor_available": true,
+              "supported_features": [
+                "structure_analysis",
+                "data_validation"
+              ],
+              "processing_count": 0,
+              "average_processing_time_ms": 0
+            }
+          },
+          "cross_modal_fusion": {
+            "fusion_models_available": 0,
+            "supported_fusion_types": [],
+            "total_fusions_attempted": 0,
+            "successful_fusions": 0,
+            "fusion_success_rate": 0.0,
+            "sample_fusion_successful": false,
+            "sample_fusion_error": "'dict' object has no attribute 'size'"
+          },
+          "processing_performance": {
+            "total_processed": 1,
+            "modality_breakdown": {
+              "text": 1
+            },
+            "average_processing_times": {
+              "text": 0.009000000000000001
+            },
+            "recent_performance": [
+              {
+                "modality": "text",
+                "processing_time_ms": 0.009000000000000001,
+                "success": true,
+                "timestamp": "2025-07-21T19:06:20.618498"
+              },
+              {
+                "modality": "image",
+                "processing_time_ms": 0.018000000000000002,
+                "success": false,
+                "timestamp": "2025-07-21T19:06:20.618541"
+              }
+            ],
+            "success_rates_by_modality": {
+              "text": 1.0,
+              "image": 0.0,
+              "audio": 0.0,
+              "video": 0.0,
+              "json": 0.0,
+              "csv": 0.0
+            }
+          },
+          "modality_statistics": {
+            "supported_modalities": [
+              "text",
+              "image",
+              "audio",
+              "video",
+              "json",
+              "csv"
+            ],
+            "processors_initialized": {
+              "text": false,
+              "image": false,
+              "audio": false,
+              "video": false
+            },
+            "fusion_models_loaded": 0,
+            "processing_history_length": 2,
+            "fusion_history_length": 1,
+            "most_processed_modality": "text",
+            "average_fusion_confidence": 0.0
+          },
+          "fusion_analysis": {
+            "total_fusion_attempts": 1,
+            "unique_fusion_combinations": 1,
+            "most_common_fusions": [
+              [
+                [
+                  "image",
+                  "text"
+                ],
+                1
+              ]
+            ],
+            "average_confidence_by_type": {},
+            "overall_success_rate": 0.0
+          },
+          "recommendations": [
+            {
+              "category": "setup",
+              "priority": "high",
+              "title": "Install Vision Processing Dependencies",
+              "description": "OpenCV and related libraries are required for image and video processing.",
+              "action": "Install opencv-python, pillow, and related packages"
+            },
+            {
+              "category": "setup",
+              "priority": "high",
+              "title": "Install Machine Learning Dependencies",
+              "description": "Transformers and PyTorch are required for advanced multi-modal processing.",
+              "action": "Install transformers, torch, and related ML packages"
+            },
+            {
+              "category": "performance",
+              "priority": "medium",
+              "title": "Improve Fusion Success Rate",
+              "description": "Current fusion success rate is 0.0%. Consider tuning confidence thresholds.",
+              "action": "Adjust fusion confidence thresholds and improve feature extraction"
+            },
+            {
+              "category": "usage",
+              "priority": "low",
+              "title": "Increase Multi-Modal Processing Usage",
+              "description": "More processing examples will improve performance metrics and insights.",
+              "action": "Process more diverse multi-modal data samples"
+            },
+            {
+              "category": "functionality",
+              "priority": "medium",
+              "title": "Expand Fusion Model Coverage",
+              "description": "Add more specialized fusion models for different modality combinations.",
+              "action": "Implement additional fusion models for specific use cases"
+            }
+          ],
+          "sample_processing": {
+            "text_processing": {
+              "input_preview": "This is a sample text for multi-modal analysis. It...",
+              "output_features": [
+                "word_count",
+                "character_count",
+                "sentiment_score",
+                "embedding",
+                "processed_text"
+              ],
+              "success": true
+            },
+            "json_processing": {
+              "input_preview": "{'name': 'Multi-Modal Test', 'data': [1, 2, 3, 4, ...",
+              "output_features": [
+                "structure_analysis",
+                "total_size",
+                "data_preview"
+              ],
+              "success": true
+            },
+            "fusion_processing": {
+              "modalities_fused": [
+                "text",
+                "json"
+              ],
+              "fusion_type": "general_multimodal",
+              "confidence": 0.7,
+              "success": true
+            }
+          }
+        },
+        "execution_time_ms": 0,
+        "metadata": {
+          "report_path": "reports/multimodal_agent_report_20250721_190620.md",
+          "supported_modalities": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "json",
+            "csv"
+          ],
+          "total_processed": 5,
+          "fusion_success_rate": 0.5
+        }
+      },
+      "timestamp": "2025-07-21T19:06:20.619543"
+    },
+    "InsightsBot": {
+      "status": "error",
+      "error": "'category'",
+      "timestamp": "2025-07-21T19:06:20.690967"
+    },
+    "CostOptBot": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:20.691038",
+        "total_monthly_cost": 2450.75,
+        "cost_breakdown": {
+          "compute": 1200.0,
+          "storage": 450.25,
+          "network": 300.5,
+          "databases": 500.0
+        },
+        "optimization_opportunities": [
+          {
+            "category": "compute",
+            "issue": "Over-provisioned EC2 instances",
+            "potential_savings": 360.0,
+            "recommendation": "Right-size instances based on CPU utilization"
+          },
+          {
+            "category": "storage",
+            "issue": "Unused EBS volumes",
+            "potential_savings": 150.25,
+            "recommendation": "Delete unattached volumes and implement lifecycle policies"
+          },
+          {
+            "category": "network",
+            "issue": "High data transfer costs",
+            "potential_savings": 120.0,
+            "recommendation": "Implement CloudFront CDN for static content"
+          }
+        ],
+        "total_potential_savings": 630.25,
+        "savings_percentage": 25.7
+      },
+      "timestamp": "2025-07-21T19:06:20.691547"
+    },
+    "ComplianceBot": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:20.691573",
+        "frameworks_checked": [
+          "GDPR",
+          "HIPAA",
+          "PCI-DSS",
+          "SOX",
+          "ISO27001"
+        ],
+        "overall_score": 78,
+        "findings": [
+          {
+            "framework": "GDPR",
+            "category": "Data Protection",
+            "severity": "high",
+            "finding": "No explicit data retention policy found",
+            "recommendation": "Implement data retention and deletion policies",
+            "article": "Article 5(1)(e) - Storage limitation"
+          },
+          {
+            "framework": "GDPR",
+            "category": "Consent Management",
+            "severity": "medium",
+            "finding": "Consent tracking mechanism not implemented",
+            "recommendation": "Add consent management system for user data processing",
+            "article": "Article 7 - Conditions for consent"
+          },
+          {
+            "framework": "HIPAA",
+            "category": "Access Controls",
+            "severity": "critical",
+            "finding": "PHI access controls not properly configured",
+            "recommendation": "Implement role-based access controls for PHI",
+            "safeguard": "Administrative Safeguards \u00a7 164.308(a)(4)"
+          },
+          {
+            "framework": "HIPAA",
+            "category": "Encryption",
+            "severity": "high",
+            "finding": "Data encryption at rest not verified",
+            "recommendation": "Ensure all PHI is encrypted using FIPS 140-2 validated encryption",
+            "safeguard": "Technical Safeguards \u00a7 164.312(a)(2)(iv)"
+          },
+          {
+            "framework": "PCI-DSS",
+            "category": "Network Security",
+            "severity": "critical",
+            "finding": "Default passwords detected in configuration",
+            "recommendation": "Change all default passwords and implement strong password policy",
+            "requirement": "Requirement 2.1"
+          },
+          {
+            "framework": "PCI-DSS",
+            "category": "Data Protection",
+            "severity": "high",
+            "finding": "Cardholder data encryption not verified",
+            "recommendation": "Implement strong cryptography for cardholder data transmission",
+            "requirement": "Requirement 4.1"
+          },
+          {
+            "framework": "General Security",
+            "category": "Access Management",
+            "severity": "medium",
+            "finding": "Multi-factor authentication not enforced",
+            "recommendation": "Enable MFA for all administrative accounts",
+            "standard": "NIST SP 800-63B"
+          },
+          {
+            "framework": "General Security",
+            "category": "Logging",
+            "severity": "medium",
+            "finding": "Insufficient audit logging configuration",
+            "recommendation": "Implement comprehensive audit logging for all system events",
+            "standard": "ISO 27001 A.12.4.1"
+          }
+        ],
+        "total_findings": 8,
+        "critical_findings": 2
+      },
+      "timestamp": "2025-07-21T19:06:20.692254"
+    },
+    "VoiceBot": {
+      "status": "success",
+      "result": {
+        "status": "failed",
+        "error": "object of type 'int' has no len()",
+        "execution_time_ms": 0
+      },
+      "timestamp": "2025-07-21T19:06:20.693405"
+    },
+    "SecuBot": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:20.693425",
+        "scan_type": "comprehensive",
+        "vulnerabilities": [
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 316,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 1:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 319,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "total_possible_edges = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 319,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "total_possible_edges = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 376,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 1:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 379,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "# Identify critical nodes (high betweenness centrality)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 393,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 1:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 399,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "for node in graph.nodes():"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 404,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if temp_graph.number_of_nodes() > 0:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 415,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 2:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 422,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "spof_ratio = len(articulation_points) / graph.number_of_nodes()"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 436,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "nodes = graph.number_of_nodes()"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 457,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 1:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 537,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_nodes() <= 1:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 540,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "max_possible_connections = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 540,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "max_possible_connections = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/architecture_optimizer.py",
+            "line": 608,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if graph.number_of_edges() > graph.number_of_nodes() * 1.5:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/workflow_designer.py",
+            "line": 296,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "parallel_groups = self._group_parallel_nodes(template)"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/workflow_designer.py",
+            "line": 366,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "def _group_parallel_nodes(self, template: WorkflowTemplate) -> Dict[str, List[str]]:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/ai_orchestrator_architect.py",
+            "line": 560,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "'nodes': self.architecture_graph.number_of_nodes(),"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/ai_orchestrator_architect.py",
+            "line": 1300,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "if self.architecture_graph.number_of_nodes() > 0:"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./core/orchestrator/ai_orchestrator_architect.py",
+            "line": 1301,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "complexity_score = 1.0 - min(1.0, self.architecture_graph.number_of_edges() / (self.architecture_graph.number_of_nodes() * 2))"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./services/vector_search/vector_engine.py",
+            "line": 106,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "hash_value = hashlib.md5(hash_input).hexdigest()"
+          },
+          {
+            "type": "weak_crypto",
+            "severity": "medium",
+            "file": "./services/vector_search/vector_engine.py",
+            "line": 358,
+            "description": "Weak cryptographic algorithm detected",
+            "code_snippet": "prompt_id = hashlib.md5(f\"{content}_{datetime.now().isoformat()}\".encode()).hexdigest()"
+          },
+          {
+            "type": "debug_mode",
+            "severity": "high",
+            "file": "services/prompt_memory/app.py",
+            "description": "Flask debug mode enabled (potential information disclosure)",
+            "recommendation": "Disable debug mode in production"
+          },
+          {
+            "type": "missing_secret_key",
+            "severity": "high",
+            "file": "services/prompt_memory/app.py",
+            "description": "Flask app missing SECRET_KEY configuration",
+            "recommendation": "Add a strong, random SECRET_KEY"
+          }
+        ],
+        "security_score": 0,
+        "recommendations": [
+          {
+            "category": "Authentication",
+            "priority": "high",
+            "action": "Implement multi-factor authentication for admin accounts",
+            "implementation": "Use libraries like PyOTP for TOTP implementation"
+          },
+          {
+            "category": "Encryption",
+            "priority": "high",
+            "action": "Encrypt sensitive data at rest",
+            "implementation": "Use cryptography library with AES-256-GCM"
+          },
+          {
+            "category": "Logging",
+            "priority": "medium",
+            "action": "Implement comprehensive security logging",
+            "implementation": "Log authentication attempts, data access, and configuration changes"
+          },
+          {
+            "category": "Network Security",
+            "priority": "medium",
+            "action": "Implement rate limiting and CORS policies",
+            "implementation": "Use Flask-Limiter for rate limiting"
+          }
+        ]
+      },
+      "timestamp": "2025-07-21T19:06:20.900944"
+    },
+    "ModelRefactor": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:20.955813",
+        "code_analysis": {
+          "architecture_assessment": {
+            "architecture_style": "plugin-based",
+            "modularity_score": 85,
+            "coupling_level": "low",
+            "cohesion_level": "high",
+            "scalability_rating": "good",
+            "findings": [
+              {
+                "type": "positive",
+                "description": "Well-structured plugin architecture with clear separation of concerns"
+              },
+              {
+                "type": "positive",
+                "description": "Service-oriented architecture supports scalability"
+              },
+              {
+                "type": "positive",
+                "description": "Configuration-driven design with agent manifest"
+              }
+            ]
+          },
+          "dependency_analysis": {
+            "dependency_count": 2,
+            "circular_dependencies": [],
+            "outdated_dependencies": [],
+            "security_vulnerabilities": [],
+            "recommendations": [
+              "Consider adding development dependencies (testing, linting)"
+            ],
+            "plugin_dependencies": {
+              "sample_plugin": [
+                "from core.plugin_interface import PluginInterface"
+              ],
+              "multimodal_agent": [
+                "import asyncio",
+                "import json",
+                "import base64",
+                "import hashlib",
+                "import logging",
+                "from typing import Dict, List, Any, Optional, Tuple, Union",
+                "from datetime import datetime",
+                "import tempfile",
+                "import os",
+                "from pathlib import Path",
+                "from PIL import Image",
+                "import io",
+                "from core.enhanced_plugin_interface import (",
+                "import cv2",
+                "import numpy as np",
+                "from transformers import pipeline, BlipProcessor, BlipForConditionalGeneration",
+                "import torch",
+                "import csv",
+                "from io import StringIO"
+              ],
+              "insights_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "from datetime import datetime, timedelta",
+                "import glob"
+              ],
+              "cost_optimization_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "from datetime import datetime"
+              ],
+              "compliance_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "import re",
+                "from datetime import datetime"
+              ],
+              "voice_agent": [
+                "import asyncio",
+                "import json",
+                "import base64",
+                "import io",
+                "import logging",
+                "from typing import Dict, List, Any, Optional, Tuple",
+                "from datetime import datetime",
+                "import tempfile",
+                "import os",
+                "from pathlib import Path",
+                "from core.enhanced_plugin_interface import (",
+                "import speech_recognition as sr",
+                "import pyttsx3",
+                "import wave",
+                "import pyaudio"
+              ],
+              "security_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "import re",
+                "import hashlib",
+                "from datetime import datetime"
+              ],
+              "model_refactor_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "from datetime import datetime"
+              ],
+              "testing_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "import re",
+                "import ast",
+                "from datetime import datetime",
+                "import sys",
+                "import os",
+                "from {module_name} import *",
+                "import unittest",
+                "import sys",
+                "import os"
+              ],
+              "brainstorming_agent": [
+                "import asyncio",
+                "import json",
+                "import random",
+                "import hashlib",
+                "import logging",
+                "from typing import Dict, List, Any, Optional, Tuple, Set",
+                "from datetime import datetime, timedelta",
+                "from itertools import combinations, permutations",
+                "import os",
+                "from pathlib import Path",
+                "from core.enhanced_plugin_interface import ("
+              ],
+              "conversation_design_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "from datetime import datetime"
+              ],
+              "architecture_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "from datetime import datetime"
+              ],
+              "privacy_agent": [
+                "from core.plugin_interface import PluginInterface",
+                "import json",
+                "import os",
+                "import re",
+                "from datetime import datetime, timedelta"
+              ]
+            }
+          },
+          "code_metrics": {
+            "total_lines": 16322,
+            "total_files": 53,
+            "average_file_size": 307.9622641509434,
+            "complexity_distribution": {
+              "low": 5,
+              "medium": 6,
+              "high": 42
+            },
+            "maintainability_index": 0,
+            "file_metrics": [
+              {
+                "file_path": "./run_tests.py",
+                "lines_of_code": 28,
+                "functions": 1,
+                "classes": 0,
+                "complexity_score": 8,
+                "documentation_ratio": 0.2222222222222222
+              },
+              {
+                "file_path": "./execute_all_agents.py",
+                "lines_of_code": 243,
+                "functions": 2,
+                "classes": 0,
+                "complexity_score": 57,
+                "documentation_ratio": 0.1
+              },
+              {
+                "file_path": "./verify_agents.py",
+                "lines_of_code": 132,
+                "functions": 6,
+                "classes": 3,
+                "complexity_score": 54,
+                "documentation_ratio": 0.10810810810810811
+              },
+              {
+                "file_path": "./enhanced_main.py",
+                "lines_of_code": 459,
+                "functions": 26,
+                "classes": 1,
+                "complexity_score": 173,
+                "documentation_ratio": 0.14205607476635515
+              },
+              {
+                "file_path": "./main.py",
+                "lines_of_code": 155,
+                "functions": 12,
+                "classes": 1,
+                "complexity_score": 79,
+                "documentation_ratio": 0.12429378531073447
+              },
+              {
+                "file_path": "./tests/simple_prompt_memory_test.py",
+                "lines_of_code": 39,
+                "functions": 6,
+                "classes": 1,
+                "complexity_score": 27,
+                "documentation_ratio": 0.20408163265306123
+              },
+              {
+                "file_path": "./tests/test_agents.py",
+                "lines_of_code": 87,
+                "functions": 13,
+                "classes": 6,
+                "complexity_score": 65,
+                "documentation_ratio": 0.18691588785046728
+              },
+              {
+                "file_path": "./tests/test_integration.py",
+                "lines_of_code": 88,
+                "functions": 11,
+                "classes": 3,
+                "complexity_score": 57,
+                "documentation_ratio": 0.23478260869565218
+              },
+              {
+                "file_path": "./tests/test_main.py",
+                "lines_of_code": 57,
+                "functions": 10,
+                "classes": 3,
+                "complexity_score": 46,
+                "documentation_ratio": 0.2962962962962963
+              },
+              {
+                "file_path": "./tests/__init___test.py",
+                "lines_of_code": 142,
+                "functions": 21,
+                "classes": 1,
+                "complexity_score": 98,
+                "documentation_ratio": 0.21978021978021978
+              },
+              {
+                "file_path": "./tests/run_all_tests.py",
+                "lines_of_code": 135,
+                "functions": 5,
+                "classes": 0,
+                "complexity_score": 44,
+                "documentation_ratio": 0.14556962025316456
+              },
+              {
+                "file_path": "./tests/plugin_interface_test.py",
+                "lines_of_code": 25,
+                "functions": 4,
+                "classes": 1,
+                "complexity_score": 18,
+                "documentation_ratio": 0.1935483870967742
+              },
+              {
+                "file_path": "./tests/test_core.py",
+                "lines_of_code": 46,
+                "functions": 8,
+                "classes": 2,
+                "complexity_score": 35,
+                "documentation_ratio": 0.20689655172413793
+              },
+              {
+                "file_path": "./tests/test_services.py",
+                "lines_of_code": 46,
+                "functions": 6,
+                "classes": 1,
+                "complexity_score": 29,
+                "documentation_ratio": 0.1320754716981132
+              },
+              {
+                "file_path": "./tests/plugin_manager_test.py",
+                "lines_of_code": 32,
+                "functions": 5,
+                "classes": 1,
+                "complexity_score": 23,
+                "documentation_ratio": 0.2
+              },
+              {
+                "file_path": "./data/generate_datasets.py",
+                "lines_of_code": 642,
+                "functions": 50,
+                "classes": 1,
+                "complexity_score": 229,
+                "documentation_ratio": 0.05029585798816568
+              },
+              {
+                "file_path": "./core/config_manager.py",
+                "lines_of_code": 214,
+                "functions": 15,
+                "classes": 3,
+                "complexity_score": 96,
+                "documentation_ratio": 0.17374517374517376
+              },
+              {
+                "file_path": "./core/plugin_interface.py",
+                "lines_of_code": 5,
+                "functions": 1,
+                "classes": 1,
+                "complexity_score": 5,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./core/enhanced_plugin_interface.py",
+                "lines_of_code": 163,
+                "functions": 28,
+                "classes": 12,
+                "complexity_score": 136,
+                "documentation_ratio": 0.2048780487804878
+              },
+              {
+                "file_path": "./core/enhanced_plugin_manager.py",
+                "lines_of_code": 353,
+                "functions": 28,
+                "classes": 4,
+                "complexity_score": 180,
+                "documentation_ratio": 0.12839506172839507
+              },
+              {
+                "file_path": "./core/plugin_manager.py",
+                "lines_of_code": 19,
+                "functions": 3,
+                "classes": 1,
+                "complexity_score": 14,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./core/orchestrator/resource_manager.py",
+                "lines_of_code": 514,
+                "functions": 40,
+                "classes": 12,
+                "complexity_score": 254,
+                "documentation_ratio": 0.1288135593220339
+              },
+              {
+                "file_path": "./core/orchestrator/performance_analyzer.py",
+                "lines_of_code": 677,
+                "functions": 49,
+                "classes": 15,
+                "complexity_score": 369,
+                "documentation_ratio": 0.14842767295597484
+              },
+              {
+                "file_path": "./core/orchestrator/intelligence_coordinator.py",
+                "lines_of_code": 830,
+                "functions": 43,
+                "classes": 11,
+                "complexity_score": 376,
+                "documentation_ratio": 0.16246215943491424
+              },
+              {
+                "file_path": "./core/orchestrator/decision_engine.py",
+                "lines_of_code": 596,
+                "functions": 50,
+                "classes": 14,
+                "complexity_score": 303,
+                "documentation_ratio": 0.1449067431850789
+              },
+              {
+                "file_path": "./core/orchestrator/__init__.py",
+                "lines_of_code": 21,
+                "functions": 0,
+                "classes": 0,
+                "complexity_score": 2,
+                "documentation_ratio": 0.08695652173913043
+              },
+              {
+                "file_path": "./core/orchestrator/architecture_optimizer.py",
+                "lines_of_code": 831,
+                "functions": 50,
+                "classes": 10,
+                "complexity_score": 354,
+                "documentation_ratio": 0.14506172839506173
+              },
+              {
+                "file_path": "./core/orchestrator/workflow_designer.py",
+                "lines_of_code": 478,
+                "functions": 33,
+                "classes": 11,
+                "complexity_score": 229,
+                "documentation_ratio": 0.13090909090909092
+              },
+              {
+                "file_path": "./core/orchestrator/ai_orchestrator_architect.py",
+                "lines_of_code": 899,
+                "functions": 47,
+                "classes": 7,
+                "complexity_score": 410,
+                "documentation_ratio": 0.16216216216216217
+              },
+              {
+                "file_path": "./core/self_healing/healing_framework.py",
+                "lines_of_code": 677,
+                "functions": 39,
+                "classes": 13,
+                "complexity_score": 315,
+                "documentation_ratio": 0.1115485564304462
+              },
+              {
+                "file_path": "./services/vector_search/vector_engine.py",
+                "lines_of_code": 440,
+                "functions": 27,
+                "classes": 7,
+                "complexity_score": 207,
+                "documentation_ratio": 0.16981132075471697
+              },
+              {
+                "file_path": "./services/prompt_memory/app.py",
+                "lines_of_code": 30,
+                "functions": 3,
+                "classes": 0,
+                "complexity_score": 12,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./services/prompt_memory/enhanced_prompt_memory.py",
+                "lines_of_code": 383,
+                "functions": 23,
+                "classes": 3,
+                "complexity_score": 154,
+                "documentation_ratio": 0.10304449648711944
+              },
+              {
+                "file_path": "./services/prompt_memory/tests/test_prompt_memory.py",
+                "lines_of_code": 35,
+                "functions": 5,
+                "classes": 0,
+                "complexity_score": 16,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./services/prompt_memory/src/prompt_memory.py",
+                "lines_of_code": 40,
+                "functions": 8,
+                "classes": 1,
+                "complexity_score": 26,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./services/prompt_memory/src/__init__.py",
+                "lines_of_code": 1,
+                "functions": 0,
+                "classes": 0,
+                "complexity_score": 0,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./services/prompt_memory/src/simple_prompt_memory.py",
+                "lines_of_code": 26,
+                "functions": 6,
+                "classes": 1,
+                "complexity_score": 21,
+                "documentation_ratio": 0.037037037037037035
+              },
+              {
+                "file_path": "./plugins/sample_plugin/__init__.py",
+                "lines_of_code": 6,
+                "functions": 2,
+                "classes": 1,
+                "complexity_score": 7,
+                "documentation_ratio": 0.0
+              },
+              {
+                "file_path": "./plugins/multimodal_agent/__init__.py",
+                "lines_of_code": 936,
+                "functions": 40,
+                "classes": 1,
+                "complexity_score": 319,
+                "documentation_ratio": 0.13172541743970315
+              },
+              {
+                "file_path": "./plugins/insights_agent/__init__.py",
+                "lines_of_code": 468,
+                "functions": 21,
+                "classes": 2,
+                "complexity_score": 208,
+                "documentation_ratio": 0.11195445920303605
+              },
+              {
+                "file_path": "./plugins/cost_optimization_agent/__init__.py",
+                "lines_of_code": 70,
+                "functions": 6,
+                "classes": 1,
+                "complexity_score": 26,
+                "documentation_ratio": 0.06666666666666667
+              },
+              {
+                "file_path": "./plugins/compliance_agent/__init__.py",
+                "lines_of_code": 174,
+                "functions": 11,
+                "classes": 1,
+                "complexity_score": 70,
+                "documentation_ratio": 0.07936507936507936
+              },
+              {
+                "file_path": "./plugins/voice_agent/__init__.py",
+                "lines_of_code": 566,
+                "functions": 23,
+                "classes": 1,
+                "complexity_score": 204,
+                "documentation_ratio": 0.1345565749235474
+              },
+              {
+                "file_path": "./plugins/security_agent/__init__.py",
+                "lines_of_code": 367,
+                "functions": 16,
+                "classes": 1,
+                "complexity_score": 147,
+                "documentation_ratio": 0.11778846153846154
+              },
+              {
+                "file_path": "./plugins/model_refactor_agent/__init__.py",
+                "lines_of_code": 439,
+                "functions": 18,
+                "classes": 3,
+                "complexity_score": 174,
+                "documentation_ratio": 0.09297520661157024
+              },
+              {
+                "file_path": "./plugins/testing_agent/__init__.py",
+                "lines_of_code": 282,
+                "functions": 20,
+                "classes": 2,
+                "complexity_score": 135,
+                "documentation_ratio": 0.19428571428571428
+              },
+              {
+                "file_path": "./plugins/brainstorming_agent/__init__.py",
+                "lines_of_code": 820,
+                "functions": 33,
+                "classes": 1,
+                "complexity_score": 258,
+                "documentation_ratio": 0.1350210970464135
+              },
+              {
+                "file_path": "./plugins/conversation_design_agent/__init__.py",
+                "lines_of_code": 319,
+                "functions": 16,
+                "classes": 2,
+                "complexity_score": 99,
+                "documentation_ratio": 0.07803468208092486
+              },
+              {
+                "file_path": "./plugins/architecture_agent/__init__.py",
+                "lines_of_code": 623,
+                "functions": 32,
+                "classes": 1,
+                "complexity_score": 168,
+                "documentation_ratio": 0.0838235294117647
+              },
+              {
+                "file_path": "./plugins/privacy_agent/__init__.py",
+                "lines_of_code": 394,
+                "functions": 19,
+                "classes": 1,
+                "complexity_score": 171,
+                "documentation_ratio": 0.12249443207126949
+              },
+              {
+                "file_path": "./shared/utils.py",
+                "lines_of_code": 174,
+                "functions": 26,
+                "classes": 7,
+                "complexity_score": 115,
+                "documentation_ratio": 0.1674641148325359
+              },
+              {
+                "file_path": "./backend/main.py",
+                "lines_of_code": 934,
+                "functions": 43,
+                "classes": 20,
+                "complexity_score": 341,
+                "documentation_ratio": 0.09671179883945841
+              },
+              {
+                "file_path": "./backend/config.py",
+                "lines_of_code": 162,
+                "functions": 10,
+                "classes": 5,
+                "complexity_score": 69,
+                "documentation_ratio": 0.19
+              }
+            ]
+          },
+          "design_patterns": {
+            "detected_patterns": [
+              {
+                "pattern": "Strategy Pattern",
+                "location": "Plugin system",
+                "description": "Plugin interface defines strategy for different agent implementations"
+              },
+              {
+                "pattern": "Factory Pattern",
+                "location": "Plugin manager",
+                "description": "Plugin manager acts as factory for creating plugin instances"
+              }
+            ],
+            "recommended_patterns": [
+              {
+                "pattern": "Observer Pattern",
+                "reason": "For event-driven communication between agents",
+                "implementation": "Create event system for agent coordination"
+              },
+              {
+                "pattern": "Command Pattern",
+                "reason": "For queuing and managing agent execution",
+                "implementation": "Implement command queue for agent tasks"
+              },
+              {
+                "pattern": "Singleton Pattern",
+                "reason": "For system-wide configuration management",
+                "implementation": "Create configuration singleton for global settings"
+              }
+            ]
+          }
+        },
+        "refactoring_opportunities": [
+          {
+            "type": "file_size",
+            "priority": "medium",
+            "description": "Found 33 large files that could be split",
+            "details": [
+              {
+                "file": "./execute_all_agents.py",
+                "lines": 325
+              },
+              {
+                "file": "./enhanced_main.py",
+                "lines": 654
+              },
+              {
+                "file": "./main.py",
+                "lines": 215
+              },
+              {
+                "file": "./tests/__init___test.py",
+                "lines": 207
+              },
+              {
+                "file": "./tests/run_all_tests.py",
+                "lines": 203
+              },
+              {
+                "file": "./data/generate_datasets.py",
+                "lines": 778
+              },
+              {
+                "file": "./core/config_manager.py",
+                "lines": 315
+              },
+              {
+                "file": "./core/enhanced_plugin_interface.py",
+                "lines": 245
+              },
+              {
+                "file": "./core/enhanced_plugin_manager.py",
+                "lines": 497
+              },
+              {
+                "file": "./core/orchestrator/resource_manager.py",
+                "lines": 705
+              },
+              {
+                "file": "./core/orchestrator/performance_analyzer.py",
+                "lines": 975
+              },
+              {
+                "file": "./core/orchestrator/intelligence_coordinator.py",
+                "lines": 1221
+              },
+              {
+                "file": "./core/orchestrator/decision_engine.py",
+                "lines": 848
+              },
+              {
+                "file": "./core/orchestrator/architecture_optimizer.py",
+                "lines": 1171
+              },
+              {
+                "file": "./core/orchestrator/workflow_designer.py",
+                "lines": 660
+              },
+              {
+                "file": "./core/orchestrator/ai_orchestrator_architect.py",
+                "lines": 1337
+              },
+              {
+                "file": "./core/self_healing/healing_framework.py",
+                "lines": 924
+              },
+              {
+                "file": "./services/vector_search/vector_engine.py",
+                "lines": 653
+              },
+              {
+                "file": "./services/prompt_memory/enhanced_prompt_memory.py",
+                "lines": 518
+              },
+              {
+                "file": "./plugins/multimodal_agent/__init__.py",
+                "lines": 1290
+              },
+              {
+                "file": "./plugins/insights_agent/__init__.py",
+                "lines": 655
+              },
+              {
+                "file": "./plugins/compliance_agent/__init__.py",
+                "lines": 226
+              },
+              {
+                "file": "./plugins/voice_agent/__init__.py",
+                "lines": 794
+              },
+              {
+                "file": "./plugins/security_agent/__init__.py",
+                "lines": 498
+              },
+              {
+                "file": "./plugins/model_refactor_agent/__init__.py",
+                "lines": 565
+              },
+              {
+                "file": "./plugins/testing_agent/__init__.py",
+                "lines": 448
+              },
+              {
+                "file": "./plugins/brainstorming_agent/__init__.py",
+                "lines": 1144
+              },
+              {
+                "file": "./plugins/conversation_design_agent/__init__.py",
+                "lines": 389
+              },
+              {
+                "file": "./plugins/architecture_agent/__init__.py",
+                "lines": 762
+              },
+              {
+                "file": "./plugins/privacy_agent/__init__.py",
+                "lines": 547
+              },
+              {
+                "file": "./shared/utils.py",
+                "lines": 256
+              },
+              {
+                "file": "./backend/main.py",
+                "lines": 1253
+              },
+              {
+                "file": "./backend/config.py",
+                "lines": 243
+              }
+            ],
+            "recommendation": "Consider breaking large files into smaller, focused modules"
+          },
+          {
+            "type": "code_duplication",
+            "priority": "low",
+            "description": "Potential code duplication in agent implementations",
+            "recommendation": "Create base agent class with common functionality"
+          },
+          {
+            "type": "error_handling",
+            "priority": "medium",
+            "description": "Inconsistent error handling across agents",
+            "recommendation": "Implement standardized error handling and logging framework"
+          },
+          {
+            "type": "configuration",
+            "priority": "high",
+            "description": "No centralized configuration management",
+            "recommendation": "Implement configuration management system for agent settings"
+          },
+          {
+            "type": "testing",
+            "priority": "high",
+            "description": "Low test coverage (22.641509433962266%)",
+            "recommendation": "Implement comprehensive testing framework"
+          }
+        ],
+        "quality_recommendations": [
+          {
+            "category": "Code Organization",
+            "priority": "high",
+            "items": [
+              "Implement consistent naming conventions across all modules",
+              "Add comprehensive docstrings to all public methods",
+              "Create clear module and package structure documentation"
+            ]
+          },
+          {
+            "category": "Error Handling",
+            "priority": "high",
+            "items": [
+              "Implement custom exception classes for different error types",
+              "Add comprehensive logging throughout the application",
+              "Create graceful degradation for non-critical failures"
+            ]
+          },
+          {
+            "category": "Performance",
+            "priority": "medium",
+            "items": [
+              "Implement caching for expensive operations",
+              "Add async/await support for I/O-bound operations",
+              "Optimize data processing in analytics agents"
+            ]
+          },
+          {
+            "category": "Maintainability",
+            "priority": "medium",
+            "items": [
+              "Create automated code formatting with tools like Black",
+              "Implement type hints throughout the codebase",
+              "Add code complexity monitoring and alerts"
+            ]
+          },
+          {
+            "category": "Security",
+            "priority": "high",
+            "items": [
+              "Implement secure coding standards",
+              "Add input validation and sanitization",
+              "Create security review process for code changes"
+            ]
+          }
+        ],
+        "implementation_phases": [
+          {
+            "phase": 1,
+            "name": "Critical Infrastructure",
+            "duration": "2-3 weeks",
+            "goals": [
+              "Establish foundation for quality improvements"
+            ],
+            "tasks": [
+              "Implement centralized configuration management",
+              "Set up comprehensive testing framework",
+              "Establish code quality standards and tooling"
+            ]
+          },
+          {
+            "phase": 2,
+            "name": "Code Quality Improvements",
+            "duration": "3-4 weeks",
+            "goals": [
+              "Improve code maintainability and readability"
+            ],
+            "tasks": [
+              "Refactor large files into smaller modules",
+              "Implement consistent error handling",
+              "Add comprehensive documentation"
+            ]
+          },
+          {
+            "phase": 3,
+            "name": "Performance & Security",
+            "duration": "2-3 weeks",
+            "goals": [
+              "Optimize performance and enhance security"
+            ],
+            "tasks": [
+              "Implement caching strategies",
+              "Add security enhancements",
+              "Optimize agent execution workflows"
+            ]
+          },
+          {
+            "phase": 4,
+            "name": "Advanced Features",
+            "duration": "3-4 weeks",
+            "goals": [
+              "Add advanced functionality and monitoring"
+            ],
+            "tasks": [
+              "Implement advanced design patterns",
+              "Add real-time monitoring and metrics",
+              "Create automated deployment pipeline"
+            ]
+          }
+        ],
+        "success_metrics": {
+          "code_quality": {
+            "maintainability_index": {
+              "target": "> 80",
+              "current": "TBD"
+            },
+            "test_coverage": {
+              "target": "> 80%",
+              "current": "TBD"
+            },
+            "documentation_coverage": {
+              "target": "> 90%",
+              "current": "TBD"
+            }
+          },
+          "performance": {
+            "agent_startup_time": {
+              "target": "< 2s",
+              "current": "TBD"
+            },
+            "system_scan_time": {
+              "target": "< 30s",
+              "current": "TBD"
+            },
+            "memory_usage": {
+              "target": "< 512MB",
+              "current": "TBD"
+            }
+          },
+          "reliability": {
+            "error_rate": {
+              "target": "< 1%",
+              "current": "TBD"
+            },
+            "uptime": {
+              "target": "> 99%",
+              "current": "TBD"
+            },
+            "recovery_time": {
+              "target": "< 5s",
+              "current": "TBD"
+            }
+          }
+        }
+      },
+      "timestamp": "2025-07-21T19:06:20.958510"
+    },
+    "TestGenie": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:20.958533",
+        "components_analyzed": [
+          {
+            "file_path": "core/plugin_manager.py",
+            "classes": [
+              {
+                "name": "PluginManager",
+                "methods": [
+                  "__init__",
+                  "discover_plugins",
+                  "run_plugins"
+                ],
+                "line_number": 4
+              }
+            ],
+            "functions": [],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 3
+          },
+          {
+            "file_path": "core/plugin_interface.py",
+            "classes": [
+              {
+                "name": "PluginInterface",
+                "methods": [
+                  "run"
+                ],
+                "line_number": 3
+              }
+            ],
+            "functions": [],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 1
+          },
+          {
+            "file_path": "plugins/sample_plugin/__init__.py",
+            "classes": [
+              {
+                "name": "SamplePlugin",
+                "methods": [
+                  "run"
+                ],
+                "line_number": 3
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 7
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 2
+          },
+          {
+            "file_path": "plugins/multimodal_agent/__init__.py",
+            "classes": [
+              {
+                "name": "MultiModalAgent",
+                "methods": [
+                  "__init__",
+                  "get_dependencies",
+                  "get_configuration_schema",
+                  "get_supported_modalities",
+                  "_generate_multimodal_description",
+                  "_find_aligned_concepts",
+                  "_align_audio_text",
+                  "_check_emotional_consistency",
+                  "_create_fusion_summary",
+                  "_estimate_data_size"
+                ],
+                "line_number": 33
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 1288
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 11
+          },
+          {
+            "file_path": "plugins/insights_agent/__init__.py",
+            "classes": [
+              {
+                "name": "AnalyticsInsightsAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "collect_system_metrics",
+                  "assess_system_health",
+                  "analyze_file_metrics",
+                  "analyze_plugin_metrics",
+                  "analyze_service_metrics",
+                  "analyze_agent_performance",
+                  "analyze_usage_patterns",
+                  "assess_development_activity",
+                  "analyze_file_changes",
+                  "calculate_growth_trends",
+                  "generate_insights_report",
+                  "generate_executive_summary",
+                  "extract_key_insights",
+                  "generate_recommendations",
+                  "generate_executive_dashboard",
+                  "get_metrics"
+                ],
+                "line_number": 7
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 654
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 19
+          },
+          {
+            "file_path": "plugins/cost_optimization_agent/__init__.py",
+            "classes": [
+              {
+                "name": "CostOptimizationAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "analyze_infrastructure_costs",
+                  "generate_optimization_report",
+                  "get_metrics"
+                ],
+                "line_number": 6
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 87
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 6
+          },
+          {
+            "file_path": "plugins/compliance_agent/__init__.py",
+            "classes": [
+              {
+                "name": "ComplianceAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "perform_compliance_scan",
+                  "check_gdpr_compliance",
+                  "check_hipaa_compliance",
+                  "check_pci_compliance",
+                  "check_security_compliance",
+                  "generate_compliance_report",
+                  "generate_remediation_checklist",
+                  "get_metrics"
+                ],
+                "line_number": 7
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 225
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 11
+          },
+          {
+            "file_path": "plugins/voice_agent/__init__.py",
+            "classes": [
+              {
+                "name": "VoiceAgent",
+                "methods": [
+                  "__init__",
+                  "get_dependencies",
+                  "get_configuration_schema"
+                ],
+                "line_number": 26
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 792
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 4
+          },
+          {
+            "file_path": "plugins/security_agent/__init__.py",
+            "classes": [
+              {
+                "name": "SecurityHardeningAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "load_vulnerability_patterns",
+                  "perform_security_scan",
+                  "scan_source_code",
+                  "scan_python_file",
+                  "check_file_permissions",
+                  "check_configuration_security",
+                  "scan_dependencies",
+                  "generate_security_recommendations",
+                  "calculate_security_score",
+                  "generate_security_report",
+                  "generate_remediation_plan",
+                  "generate_security_checklist",
+                  "get_metrics"
+                ],
+                "line_number": 8
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 497
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 16
+          },
+          {
+            "file_path": "plugins/model_refactor_agent/__init__.py",
+            "classes": [
+              {
+                "name": "ModelRefactorAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "analyze_codebase_structure",
+                  "assess_architecture",
+                  "analyze_dependencies",
+                  "calculate_code_metrics",
+                  "analyze_file_metrics",
+                  "identify_design_patterns",
+                  "identify_refactoring_opportunities",
+                  "assess_test_coverage",
+                  "generate_quality_recommendations",
+                  "create_refactoring_plan",
+                  "create_implementation_phases",
+                  "define_success_metrics",
+                  "generate_refactoring_guide",
+                  "get_metrics"
+                ],
+                "line_number": 6
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 564
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 17
+          },
+          {
+            "file_path": "plugins/testing_agent/__init__.py",
+            "classes": [
+              {
+                "name": "TestAutomationAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "analyze_codebase_for_testing",
+                  "analyze_python_file",
+                  "generate_tests",
+                  "generate_test_file",
+                  "generate_test_content",
+                  "create_test_runner",
+                  "run_existing_tests",
+                  "generate_test_report",
+                  "generate_testing_guidelines",
+                  "get_metrics"
+                ],
+                "line_number": 8
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 447
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 13
+          },
+          {
+            "file_path": "plugins/brainstorming_agent/__init__.py",
+            "classes": [
+              {
+                "name": "BrainstormingAgent",
+                "methods": [
+                  "__init__",
+                  "get_dependencies",
+                  "get_configuration_schema"
+                ],
+                "line_number": 17
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 1142
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 4
+          },
+          {
+            "file_path": "plugins/conversation_design_agent/__init__.py",
+            "classes": [
+              {
+                "name": "ConversationDesignAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "design_conversation_flows",
+                  "design_welcome_flow",
+                  "design_help_flow",
+                  "design_error_handling_flow",
+                  "design_feedback_flow",
+                  "create_user_personas",
+                  "analyze_interaction_patterns",
+                  "identify_conversation_points",
+                  "generate_conversation_design_guide",
+                  "get_design_principles",
+                  "get_implementation_recommendations",
+                  "generate_conversation_handbook",
+                  "get_metrics"
+                ],
+                "line_number": 6
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 388
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 16
+          },
+          {
+            "file_path": "plugins/architecture_agent/__init__.py",
+            "classes": [
+              {
+                "name": "ArchitectureDesignerAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "analyze_current_architecture",
+                  "identify_architecture_style",
+                  "catalog_components",
+                  "infer_component_responsibility",
+                  "infer_agent_responsibility",
+                  "infer_service_responsibility",
+                  "analyze_data_flow",
+                  "identify_integration_points",
+                  "assess_current_scalability",
+                  "assess_reliability",
+                  "design_future_architecture",
+                  "identify_key_improvements",
+                  "design_future_components",
+                  "recommend_technology_stack",
+                  "design_deployment_model",
+                  "create_scaling_strategy",
+                  "identify_scaling_limitations",
+                  "define_scaling_dimensions",
+                  "plan_scaling_implementation",
+                  "create_capacity_plan",
+                  "generate_migration_plan",
+                  "create_migration_phases",
+                  "assess_migration_risks",
+                  "define_rollback_strategy",
+                  "create_architecture_document",
+                  "create_executive_summary",
+                  "create_architecture_recommendations",
+                  "generate_architecture_blueprint",
+                  "get_metrics"
+                ],
+                "line_number": 6
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 761
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 32
+          },
+          {
+            "file_path": "plugins/privacy_agent/__init__.py",
+            "classes": [
+              {
+                "name": "PrivacyGuardAgent",
+                "methods": [
+                  "__init__",
+                  "run",
+                  "load_pii_patterns",
+                  "perform_privacy_scan",
+                  "scan_for_pii",
+                  "scan_file_for_pii",
+                  "mask_pii_data",
+                  "get_pii_severity",
+                  "analyze_data_flows",
+                  "check_consent_management",
+                  "check_data_retention",
+                  "check_privacy_policy",
+                  "identify_compliance_gaps",
+                  "calculate_privacy_score",
+                  "generate_privacy_report",
+                  "generate_privacy_action_plan",
+                  "generate_gdpr_checklist",
+                  "get_metrics"
+                ],
+                "line_number": 7
+              }
+            ],
+            "functions": [
+              {
+                "name": "get_plugin",
+                "args": [],
+                "line_number": 546
+              }
+            ],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 19
+          },
+          {
+            "file_path": "services/prompt_memory/src/simple_prompt_memory.py",
+            "classes": [
+              {
+                "name": "PromptMemory",
+                "methods": [
+                  "__init__",
+                  "_load_prompts",
+                  "_save_prompts",
+                  "add",
+                  "search",
+                  "get_all"
+                ],
+                "line_number": 4
+              }
+            ],
+            "functions": [],
+            "methods": [],
+            "test_file_exists": false,
+            "complexity_score": 6
+          }
+        ],
+        "test_coverage": {},
+        "missing_tests": [],
+        "test_suggestions": []
+      },
+      "timestamp": "2025-07-21T19:06:21.161440"
+    },
+    "BrainstormBot": {
+      "status": "success",
+      "result": {
+        "status": "failed",
+        "error": "Cannot choose from an empty sequence",
+        "execution_time_ms": 0
+      },
+      "timestamp": "2025-07-21T19:06:21.162272"
+    },
+    "ConvDesignBot": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:21.162351",
+        "conversation_flows": {
+          "welcome_flow": {
+            "name": "Welcome Flow",
+            "purpose": "Introduce new users to the AI Operating System",
+            "steps": [
+              {
+                "step": 1,
+                "agent_message": "\ud83d\ude80 Welcome to the AI Operating System Framework! I'm here to help you navigate our intelligent agent ecosystem.",
+                "user_options": [
+                  "Learn about agents",
+                  "Run system analysis",
+                  "Get help"
+                ],
+                "follow_up_prompts": [
+                  "What would you like to explore first?"
+                ]
+              },
+              {
+                "step": 2,
+                "agent_message": "Great choice! Our system includes specialized agents for security, compliance, cost optimization, and more. Each agent works autonomously to improve your system.",
+                "user_options": [
+                  "Run all agents",
+                  "Choose specific agents",
+                  "Learn more"
+                ],
+                "follow_up_prompts": [
+                  "Would you like to start with a full system scan?"
+                ]
+              },
+              {
+                "step": 3,
+                "agent_message": "Perfect! I'll run a comprehensive analysis using all our agents. This will give you insights into security, compliance, costs, and system health.",
+                "user_options": [
+                  "Start analysis",
+                  "Customize settings",
+                  "Learn about specific agents"
+                ],
+                "follow_up_prompts": [
+                  "Ready to begin? The analysis will take a few minutes."
+                ]
+              }
+            ],
+            "personality_traits": [
+              "helpful",
+              "professional",
+              "encouraging"
+            ],
+            "tone": "friendly_professional"
+          },
+          "help_flow": {
+            "name": "Help Flow",
+            "purpose": "Provide assistance and guidance to users",
+            "steps": [
+              {
+                "step": 1,
+                "agent_message": "\ud83c\udd98 I'm here to help! What do you need assistance with?",
+                "user_options": [
+                  "Understanding agents",
+                  "Running analysis",
+                  "Interpreting results",
+                  "System setup"
+                ],
+                "follow_up_prompts": [
+                  "Let me know what's challenging you right now."
+                ]
+              },
+              {
+                "step": 2,
+                "agent_message": "I understand you need help with [TOPIC]. Let me provide you with detailed guidance.",
+                "user_options": [
+                  "Step-by-step guide",
+                  "Quick overview",
+                  "Related documentation"
+                ],
+                "follow_up_prompts": [
+                  "Would you prefer a detailed walkthrough or a quick summary?"
+                ]
+              }
+            ],
+            "personality_traits": [
+              "patient",
+              "thorough",
+              "supportive"
+            ],
+            "tone": "supportive_expert"
+          },
+          "error_handling_flow": {
+            "name": "Error Handling Flow",
+            "purpose": "Guide users through error resolution",
+            "steps": [
+              {
+                "step": 1,
+                "agent_message": "\u26a0\ufe0f I noticed something went wrong. Don't worry, I'll help you resolve this issue.",
+                "user_options": [
+                  "Try again",
+                  "Get detailed error info",
+                  "Contact support"
+                ],
+                "follow_up_prompts": [
+                  "Can you tell me what you were trying to do when this happened?"
+                ]
+              },
+              {
+                "step": 2,
+                "agent_message": "Based on the error, here's what likely happened and how to fix it: [ERROR_EXPLANATION]",
+                "user_options": [
+                  "Try suggested fix",
+                  "Try different approach",
+                  "Need more help"
+                ],
+                "follow_up_prompts": [
+                  "Would you like me to walk you through the solution?"
+                ]
+              }
+            ],
+            "personality_traits": [
+              "calm",
+              "solution_focused",
+              "reassuring"
+            ],
+            "tone": "calm_helpful"
+          },
+          "feedback_flow": {
+            "name": "Feedback Flow",
+            "purpose": "Collect user feedback and suggestions",
+            "steps": [
+              {
+                "step": 1,
+                "agent_message": "\ud83d\udcdd Your feedback helps us improve! How was your experience with the AI Operating System?",
+                "user_options": [
+                  "Excellent",
+                  "Good",
+                  "Fair",
+                  "Needs improvement"
+                ],
+                "follow_up_prompts": [
+                  "What specific aspect would you like to comment on?"
+                ]
+              },
+              {
+                "step": 2,
+                "agent_message": "Thank you for the feedback! Is there anything specific you'd like to see improved or added?",
+                "user_options": [
+                  "More agents",
+                  "Better UI",
+                  "Faster processing",
+                  "Other"
+                ],
+                "follow_up_prompts": [
+                  "Your suggestions help shape our roadmap."
+                ]
+              }
+            ],
+            "personality_traits": [
+              "appreciative",
+              "curious",
+              "improvement_focused"
+            ],
+            "tone": "grateful_professional"
+          }
+        },
+        "user_personas": {
+          "developer": {
+            "name": "Alex the Developer",
+            "description": "Experienced software developer working on AI/ML projects",
+            "goals": [
+              "Optimize system performance",
+              "Ensure code quality",
+              "Implement best practices"
+            ],
+            "pain_points": [
+              "Complex setup processes",
+              "Unclear documentation",
+              "Time-consuming manual tasks"
+            ],
+            "preferred_communication": [
+              "Technical details",
+              "Code examples",
+              "Clear steps"
+            ],
+            "conversation_style": "Direct and technical, appreciates efficiency"
+          },
+          "security_analyst": {
+            "name": "Sarah the Security Analyst",
+            "description": "Cybersecurity professional focused on system hardening",
+            "goals": [
+              "Identify vulnerabilities",
+              "Ensure compliance",
+              "Monitor threats"
+            ],
+            "pain_points": [
+              "False positives",
+              "Incomplete scans",
+              "Manual review overhead"
+            ],
+            "preferred_communication": [
+              "Risk assessments",
+              "Compliance reports",
+              "Actionable recommendations"
+            ],
+            "conversation_style": "Prefers detailed security context and priority rankings"
+          },
+          "business_manager": {
+            "name": "Marcus the Manager",
+            "description": "Business leader focused on ROI and operational efficiency",
+            "goals": [
+              "Reduce costs",
+              "Improve efficiency",
+              "Demonstrate value"
+            ],
+            "pain_points": [
+              "Technical complexity",
+              "Unclear ROI",
+              "Long implementation times"
+            ],
+            "preferred_communication": [
+              "Business impact",
+              "Cost savings",
+              "High-level summaries"
+            ],
+            "conversation_style": "Prefers executive summaries with clear business value"
+          },
+          "compliance_officer": {
+            "name": "Emma the Compliance Officer",
+            "description": "Ensures organizational adherence to regulations",
+            "goals": [
+              "Maintain compliance",
+              "Reduce audit risks",
+              "Document processes"
+            ],
+            "pain_points": [
+              "Changing regulations",
+              "Manual compliance checks",
+              "Documentation overhead"
+            ],
+            "preferred_communication": [
+              "Regulatory requirements",
+              "Audit trails",
+              "Remediation steps"
+            ],
+            "conversation_style": "Formal, detail-oriented, focused on documentation"
+          }
+        },
+        "interaction_patterns": {
+          "greeting_patterns": [
+            "Hello, I need help with...",
+            "Hi, can you run...",
+            "Good morning, I want to...",
+            "Hey there, how do I..."
+          ],
+          "request_patterns": [
+            "Can you analyze my...",
+            "I need a report on...",
+            "Please check my...",
+            "Run a scan for..."
+          ],
+          "clarification_patterns": [
+            "What does this mean?",
+            "Can you explain...",
+            "I don't understand...",
+            "Could you clarify..."
+          ],
+          "completion_patterns": [
+            "Thank you, that was helpful",
+            "Perfect, exactly what I needed",
+            "Great, can you also...",
+            "Thanks, how do I..."
+          ],
+          "system_conversation_points": [
+            {
+              "location": "Prompt Memory Service",
+              "opportunity": "Add conversational interface for prompt management",
+              "suggestion": "Include natural language queries for searching prompts"
+            },
+            {
+              "location": "Agent Reports",
+              "opportunity": "Add conversational report explanations",
+              "suggestion": "Provide natural language summaries of technical reports"
+            },
+            {
+              "location": "Main System Interface",
+              "opportunity": "Add interactive agent selection",
+              "suggestion": "Allow users to describe their needs and recommend appropriate agents"
+            }
+          ]
+        },
+        "design_principles": {
+          "clarity": "Use clear, jargon-free language appropriate for the user's expertise level",
+          "personality": "Maintain a consistent, helpful personality across all interactions",
+          "context_awareness": "Remember previous interactions and user preferences",
+          "progressive_disclosure": "Reveal information gradually based on user needs",
+          "error_recovery": "Provide clear guidance when things go wrong",
+          "user_agency": "Give users control over the conversation flow",
+          "accessibility": "Design for users with varying abilities and technical expertise",
+          "efficiency": "Respect user time with concise, relevant responses"
+        },
+        "implementation_recommendations": [
+          {
+            "priority": "high",
+            "component": "Agent Interaction Layer",
+            "recommendation": "Add conversational wrappers around agent outputs",
+            "implementation": "Create a ConversationManager class to handle user interactions"
+          },
+          {
+            "priority": "high",
+            "component": "Natural Language Processing",
+            "recommendation": "Implement intent recognition for user queries",
+            "implementation": "Use simple keyword matching or integrate with NLP libraries"
+          },
+          {
+            "priority": "medium",
+            "component": "User Context Management",
+            "recommendation": "Track user sessions and preferences",
+            "implementation": "Store user interaction history and personalization settings"
+          },
+          {
+            "priority": "medium",
+            "component": "Multi-modal Interfaces",
+            "recommendation": "Support both CLI and web-based conversations",
+            "implementation": "Create REST API endpoints for conversation management"
+          },
+          {
+            "priority": "low",
+            "component": "Voice Interface",
+            "recommendation": "Consider voice interaction capabilities",
+            "implementation": "Integrate with speech-to-text and text-to-speech services"
+          }
+        ]
+      },
+      "timestamp": "2025-07-21T19:06:21.163525"
+    },
+    "ArchitectureDesignerAgent": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:21.163948",
+        "executive_summary": {
+          "current_state": "Plugin-based microservices architecture with good modularity",
+          "target_state": "Cloud-native, event-driven architecture with auto-scaling",
+          "key_benefits": [
+            "10x improvement in scalability",
+            "50% reduction in operational overhead",
+            "Enhanced reliability and fault tolerance",
+            "Improved developer productivity"
+          ],
+          "investment_required": "12-16 weeks development effort",
+          "recommended_timeline": "4-phase migration over 6 months"
+        },
+        "current_architecture": {
+          "architecture_style": {
+            "primary": "Microservices with Plugin Architecture",
+            "secondary": "Event-Driven Architecture",
+            "patterns": [
+              {
+                "pattern": "Plugin Architecture",
+                "evidence": "Dedicated plugins directory with interface definition",
+                "benefits": [
+                  "Extensibility",
+                  "Modularity",
+                  "Separation of concerns"
+                ]
+              },
+              {
+                "pattern": "Service-Oriented Architecture",
+                "evidence": "Dedicated services directory",
+                "benefits": [
+                  "Service isolation",
+                  "Independent deployment",
+                  "Technology diversity"
+                ]
+              },
+              {
+                "pattern": "Layered Architecture",
+                "evidence": "Core layer with business logic separation",
+                "benefits": [
+                  "Clear separation",
+                  "Reusability",
+                  "Maintainability"
+                ]
+              }
+            ]
+          },
+          "components": {
+            "core_components": [
+              {
+                "name": "config_manager",
+                "type": "Core Module",
+                "responsibility": "Handles configuration management"
+              },
+              {
+                "name": "plugin_interface",
+                "type": "Core Module",
+                "responsibility": "Defines plugin contract and interface"
+              },
+              {
+                "name": "enhanced_plugin_interface",
+                "type": "Core Module",
+                "responsibility": "Handles enhanced plugin interface functionality"
+              },
+              {
+                "name": "enhanced_plugin_manager",
+                "type": "Core Module",
+                "responsibility": "Handles enhanced plugin manager functionality"
+              },
+              {
+                "name": "plugin_manager",
+                "type": "Core Module",
+                "responsibility": "Manages plugin lifecycle and discovery"
+              }
+            ],
+            "agents": [
+              {
+                "name": "sample_plugin",
+                "type": "AI Agent",
+                "responsibility": "Handles sample plugin functionality"
+              },
+              {
+                "name": "multimodal_agent",
+                "type": "AI Agent",
+                "responsibility": "Handles multimodal agent functionality"
+              },
+              {
+                "name": "insights_agent",
+                "type": "AI Agent",
+                "responsibility": "Generates analytics and insights"
+              },
+              {
+                "name": "cost_optimization_agent",
+                "type": "AI Agent",
+                "responsibility": "Analyzes and optimizes infrastructure costs"
+              },
+              {
+                "name": "compliance_agent",
+                "type": "AI Agent",
+                "responsibility": "Ensures regulatory compliance"
+              },
+              {
+                "name": "voice_agent",
+                "type": "AI Agent",
+                "responsibility": "Handles voice agent functionality"
+              },
+              {
+                "name": "security_agent",
+                "type": "AI Agent",
+                "responsibility": "Performs security analysis and hardening"
+              },
+              {
+                "name": "model_refactor_agent",
+                "type": "AI Agent",
+                "responsibility": "Refactors and optimizes code"
+              },
+              {
+                "name": "testing_agent",
+                "type": "AI Agent",
+                "responsibility": "Automates testing and quality assurance"
+              },
+              {
+                "name": "brainstorming_agent",
+                "type": "AI Agent",
+                "responsibility": "Handles brainstorming agent functionality"
+              },
+              {
+                "name": "conversation_design_agent",
+                "type": "AI Agent",
+                "responsibility": "Designs conversational interfaces"
+              },
+              {
+                "name": "architecture_agent",
+                "type": "AI Agent",
+                "responsibility": "Designs system architecture"
+              },
+              {
+                "name": "privacy_agent",
+                "type": "AI Agent",
+                "responsibility": "Manages data privacy and protection"
+              }
+            ],
+            "services": [
+              {
+                "name": "vector_search",
+                "type": "Microservice",
+                "responsibility": "Provides vector search functionality"
+              },
+              {
+                "name": "prompt_memory",
+                "type": "Microservice",
+                "responsibility": "Stores and retrieves AI prompts"
+              }
+            ],
+            "utilities": [],
+            "data_stores": [
+              {
+                "name": "ai-agents-manifest.json",
+                "type": "Data Store",
+                "format": "JSON"
+              },
+              {
+                "name": "requirements.txt",
+                "type": "Data Store",
+                "format": "TXT"
+              }
+            ]
+          },
+          "data_flow": {
+            "entry_points": [
+              {
+                "type": "CLI",
+                "description": "Command-line interface via main.py"
+              },
+              {
+                "type": "API",
+                "description": "REST API via Flask services"
+              },
+              {
+                "type": "File",
+                "description": "Configuration files and data inputs"
+              }
+            ],
+            "processing_stages": [
+              {
+                "stage": "Discovery",
+                "description": "Plugin manager discovers and loads agents"
+              },
+              {
+                "stage": "Execution",
+                "description": "Agents execute their analysis and processing"
+              },
+              {
+                "stage": "Aggregation",
+                "description": "Results are collected and consolidated"
+              },
+              {
+                "stage": "Reporting",
+                "description": "Outputs are generated and stored"
+              }
+            ],
+            "output_channels": [
+              {
+                "type": "Reports",
+                "description": "JSON and Markdown reports in reports/ directory"
+              },
+              {
+                "type": "Logs",
+                "description": "Console output and log files"
+              },
+              {
+                "type": "API",
+                "description": "REST API responses"
+              }
+            ],
+            "data_transformations": []
+          },
+          "integration_points": {
+            "internal_integrations": [
+              {
+                "components": [
+                  "Plugin Manager",
+                  "Agents"
+                ],
+                "type": "Interface-based"
+              },
+              {
+                "components": [
+                  "Agents",
+                  "Report Generator"
+                ],
+                "type": "Data-driven"
+              },
+              {
+                "components": [
+                  "Services",
+                  "Core"
+                ],
+                "type": "API-based"
+              }
+            ],
+            "external_integrations": [
+              {
+                "system": "Cloud Providers",
+                "purpose": "Cost analysis and resource monitoring"
+              },
+              {
+                "system": "CI/CD Systems",
+                "purpose": "Automated testing and deployment"
+              },
+              {
+                "system": "Monitoring Tools",
+                "purpose": "System health and performance tracking"
+              },
+              {
+                "system": "Identity Providers",
+                "purpose": "Authentication and authorization"
+              }
+            ],
+            "api_endpoints": [
+              {
+                "service": "Prompt Memory",
+                "endpoints": [
+                  "/add",
+                  "/search",
+                  "/prompts"
+                ]
+              }
+            ],
+            "data_interfaces": []
+          },
+          "scalability_assessment": {
+            "horizontal_scalability": "Good",
+            "vertical_scalability": "Limited",
+            "bottlenecks": [
+              {
+                "component": "File-based storage",
+                "impact": "Medium",
+                "description": "JSON files don't scale well"
+              },
+              {
+                "component": "Synchronous execution",
+                "impact": "High",
+                "description": "Agents run sequentially"
+              },
+              {
+                "component": "Memory usage",
+                "impact": "Medium",
+                "description": "All data loaded in memory"
+              }
+            ],
+            "scalability_score": 75,
+            "recommendations": [
+              "Implement database storage for better data management",
+              "Add asynchronous agent execution",
+              "Implement caching layers for frequently accessed data",
+              "Create horizontal scaling for agent workers"
+            ]
+          },
+          "reliability_assessment": {
+            "fault_tolerance": "Basic",
+            "error_handling": "Partial",
+            "recovery_mechanisms": "Limited",
+            "reliability_score": 65,
+            "improvements": [
+              "Implement comprehensive error handling and recovery",
+              "Add health checks and monitoring",
+              "Create backup and restore mechanisms",
+              "Implement circuit breakers for external dependencies"
+            ]
+          }
+        },
+        "future_architecture": {
+          "target_architecture": "Cloud-Native Microservices with Event-Driven Architecture",
+          "key_improvements": [
+            {
+              "area": "Scalability",
+              "improvement": "Container-based deployment with auto-scaling",
+              "benefit": "Handle variable workloads efficiently"
+            },
+            {
+              "area": "Reliability",
+              "improvement": "Distributed architecture with redundancy",
+              "benefit": "Eliminate single points of failure"
+            },
+            {
+              "area": "Performance",
+              "improvement": "Asynchronous processing and caching",
+              "benefit": "Improve response times and throughput"
+            },
+            {
+              "area": "Observability",
+              "improvement": "Comprehensive monitoring and logging",
+              "benefit": "Better system visibility and debugging"
+            },
+            {
+              "area": "Security",
+              "improvement": "Zero-trust security model",
+              "benefit": "Enhanced security posture"
+            }
+          ],
+          "component_design": {
+            "api_gateway": {
+              "purpose": "Central entry point for all requests",
+              "features": [
+                "Rate limiting",
+                "Authentication",
+                "Routing",
+                "Load balancing"
+              ]
+            },
+            "agent_orchestrator": {
+              "purpose": "Manages agent execution and coordination",
+              "features": [
+                "Task queuing",
+                "Dependency management",
+                "Parallel execution"
+              ]
+            },
+            "event_bus": {
+              "purpose": "Enables event-driven communication",
+              "features": [
+                "Pub/Sub messaging",
+                "Event sourcing",
+                "Real-time updates"
+              ]
+            },
+            "data_layer": {
+              "purpose": "Persistent data storage and management",
+              "features": [
+                "Database abstraction",
+                "Caching",
+                "Data versioning"
+              ]
+            },
+            "monitoring_service": {
+              "purpose": "System observability and health monitoring",
+              "features": [
+                "Metrics collection",
+                "Alerting",
+                "Distributed tracing"
+              ]
+            }
+          },
+          "technology_stack": {
+            "runtime": {
+              "primary": "Python 3.11+",
+              "async": "AsyncIO",
+              "packaging": "Docker containers"
+            },
+            "data_storage": {
+              "primary": "PostgreSQL",
+              "cache": "Redis",
+              "search": "Elasticsearch"
+            },
+            "messaging": {
+              "event_bus": "Apache Kafka",
+              "task_queue": "Celery",
+              "real_time": "WebSockets"
+            },
+            "infrastructure": {
+              "orchestration": "Kubernetes",
+              "service_mesh": "Istio",
+              "ingress": "Nginx"
+            },
+            "observability": {
+              "metrics": "Prometheus",
+              "logging": "ELK Stack",
+              "tracing": "Jaeger"
+            }
+          },
+          "deployment_model": {
+            "deployment_strategy": "Blue-Green with Canary Releases",
+            "environments": [
+              "Development",
+              "Staging",
+              "Production"
+            ],
+            "scaling_strategy": {
+              "agents": "Horizontal pod autoscaling based on CPU/memory",
+              "services": "Vertical and horizontal scaling based on load",
+              "data": "Read replicas and sharding for high throughput"
+            },
+            "disaster_recovery": {
+              "backup_strategy": "Automated daily backups with point-in-time recovery",
+              "failover": "Multi-region deployment with automatic failover",
+              "rto": "< 15 minutes",
+              "rpo": "< 5 minutes"
+            }
+          }
+        },
+        "scaling_strategy": {
+          "current_limitations": [
+            {
+              "limitation": "Sequential agent execution",
+              "impact": "High",
+              "solution": "Parallel execution"
+            },
+            {
+              "limitation": "File-based storage",
+              "impact": "Medium",
+              "solution": "Database migration"
+            },
+            {
+              "limitation": "Monolithic deployment",
+              "impact": "Medium",
+              "solution": "Containerization"
+            },
+            {
+              "limitation": "No load balancing",
+              "impact": "High",
+              "solution": "Load balancer implementation"
+            }
+          ],
+          "scaling_dimensions": {
+            "compute_scaling": {
+              "horizontal": "Add more agent worker nodes",
+              "vertical": "Increase CPU/memory per node",
+              "triggers": [
+                "CPU > 70%",
+                "Memory > 80%",
+                "Queue depth > 100"
+              ]
+            },
+            "data_scaling": {
+              "read_scaling": "Read replicas for query distribution",
+              "write_scaling": "Sharding for write distribution",
+              "storage_scaling": "Automated storage expansion"
+            },
+            "network_scaling": {
+              "cdn": "Content delivery network for static assets",
+              "load_balancing": "Geographic load distribution",
+              "bandwidth": "Adaptive bandwidth allocation"
+            }
+          },
+          "implementation_phases": [
+            {
+              "phase": "Phase 1: Containerization",
+              "duration": "4-6 weeks",
+              "goals": [
+                "Containerize all components",
+                "Implement basic orchestration"
+              ],
+              "deliverables": [
+                "Docker images",
+                "Kubernetes manifests",
+                "CI/CD pipeline"
+              ]
+            },
+            {
+              "phase": "Phase 2: Microservices",
+              "duration": "6-8 weeks",
+              "goals": [
+                "Break monolith into services",
+                "Implement service mesh"
+              ],
+              "deliverables": [
+                "Service definitions",
+                "API contracts",
+                "Service mesh configuration"
+              ]
+            },
+            {
+              "phase": "Phase 3: Auto-scaling",
+              "duration": "4-6 weeks",
+              "goals": [
+                "Implement auto-scaling",
+                "Add monitoring"
+              ],
+              "deliverables": [
+                "Scaling policies",
+                "Monitoring dashboards",
+                "Alerting rules"
+              ]
+            }
+          ],
+          "capacity_planning": {
+            "baseline_requirements": {
+              "cpu": "4 cores",
+              "memory": "8GB",
+              "storage": "100GB",
+              "network": "1Gbps"
+            },
+            "scaling_factors": {
+              "agents": "Linear scaling with agent count",
+              "data": "Logarithmic scaling with data volume",
+              "users": "Linear scaling with concurrent users"
+            },
+            "capacity_thresholds": {
+              "scale_up": {
+                "cpu": "70%",
+                "memory": "80%",
+                "disk": "85%"
+              },
+              "scale_down": {
+                "cpu": "30%",
+                "memory": "40%",
+                "disk": "50%"
+              }
+            }
+          }
+        },
+        "migration_plan": {
+          "migration_strategy": "Incremental Migration with Strangler Fig Pattern",
+          "migration_phases": [
+            {
+              "phase": 1,
+              "name": "Infrastructure Preparation",
+              "duration": "2-3 weeks",
+              "description": "Set up target infrastructure and tooling",
+              "tasks": [
+                "Set up Kubernetes cluster",
+                "Configure CI/CD pipelines",
+                "Implement monitoring stack",
+                "Set up development environments"
+              ],
+              "success_criteria": [
+                "Infrastructure ready",
+                "Pipelines functional",
+                "Monitoring active"
+              ]
+            },
+            {
+              "phase": 2,
+              "name": "Core Services Migration",
+              "duration": "4-6 weeks",
+              "description": "Migrate core services to new architecture",
+              "tasks": [
+                "Containerize existing services",
+                "Implement database migration",
+                "Set up service mesh",
+                "Configure load balancing"
+              ],
+              "success_criteria": [
+                "Services running in containers",
+                "Database migrated",
+                "Mesh operational"
+              ]
+            },
+            {
+              "phase": 3,
+              "name": "Agent System Modernization",
+              "duration": "6-8 weeks",
+              "description": "Modernize agent execution and management",
+              "tasks": [
+                "Implement agent orchestrator",
+                "Add asynchronous execution",
+                "Create event-driven communication",
+                "Implement auto-scaling"
+              ],
+              "success_criteria": [
+                "Orchestrator functional",
+                "Async execution",
+                "Events working",
+                "Auto-scaling active"
+              ]
+            },
+            {
+              "phase": 4,
+              "name": "Advanced Features",
+              "duration": "4-6 weeks",
+              "description": "Add advanced capabilities and optimization",
+              "tasks": [
+                "Implement advanced caching",
+                "Add machine learning capabilities",
+                "Create advanced analytics",
+                "Implement security enhancements"
+              ],
+              "success_criteria": [
+                "Caching optimized",
+                "ML integrated",
+                "Analytics enhanced",
+                "Security hardened"
+              ]
+            }
+          ],
+          "risk_assessment": [
+            {
+              "risk": "Service downtime during migration",
+              "probability": "Medium",
+              "impact": "High",
+              "mitigation": "Blue-green deployment with rollback capability"
+            },
+            {
+              "risk": "Data loss during database migration",
+              "probability": "Low",
+              "impact": "Critical",
+              "mitigation": "Comprehensive backup and testing strategy"
+            },
+            {
+              "risk": "Performance degradation",
+              "probability": "Medium",
+              "impact": "Medium",
+              "mitigation": "Thorough performance testing and optimization"
+            },
+            {
+              "risk": "Integration failures",
+              "probability": "High",
+              "impact": "Medium",
+              "mitigation": "Extensive integration testing and monitoring"
+            }
+          ],
+          "rollback_strategy": {
+            "rollback_triggers": [
+              "System availability < 95%",
+              "Performance degradation > 50%",
+              "Critical functionality failures",
+              "Data integrity issues"
+            ],
+            "rollback_procedures": [
+              "Immediate traffic redirection to old system",
+              "Database state restoration from backup",
+              "Service configuration rollback",
+              "Post-incident analysis and reporting"
+            ],
+            "rollback_time_targets": {
+              "detection": "< 5 minutes",
+              "decision": "< 10 minutes",
+              "execution": "< 30 minutes",
+              "verification": "< 15 minutes"
+            }
+          }
+        },
+        "recommendations": [
+          {
+            "category": "Immediate Actions",
+            "priority": "High",
+            "recommendations": [
+              "Begin containerization of existing services",
+              "Implement comprehensive monitoring",
+              "Set up development/staging environments",
+              "Create architectural documentation"
+            ]
+          },
+          {
+            "category": "Short-term (3-6 months)",
+            "priority": "High",
+            "recommendations": [
+              "Complete microservices migration",
+              "Implement event-driven architecture",
+              "Add auto-scaling capabilities",
+              "Enhance security posture"
+            ]
+          },
+          {
+            "category": "Long-term (6-12 months)",
+            "priority": "Medium",
+            "recommendations": [
+              "Implement advanced analytics",
+              "Add machine learning capabilities",
+              "Create multi-region deployment",
+              "Optimize for cost efficiency"
+            ]
+          }
+        ]
+      },
+      "timestamp": "2025-07-21T19:06:21.165680"
+    },
+    "PrivacyGuard": {
+      "status": "success",
+      "result": {
+        "timestamp": "2025-07-21T19:06:21.165699",
+        "scan_type": "privacy_compliance",
+        "frameworks_checked": [
+          "GDPR",
+          "CCPA",
+          "PIPEDA",
+          "LGPD"
+        ],
+        "pii_findings": [
+          {
+            "type": "phone",
+            "file": "./core/orchestrator/performance_analyzer.py",
+            "line": 637,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB"
+          },
+          {
+            "type": "phone",
+            "file": "./core/orchestrator/performance_analyzer.py",
+            "line": 637,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB"
+          },
+          {
+            "type": "email",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 45,
+            "severity": "medium",
+            "description": "Potential email detected",
+            "masked_data": "ad***@aimos.local",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"email=\\\\\\\\\\\\\\\\\\\\\\\\\\"
+          },
+          {
+            "type": "email",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 54,
+            "severity": "medium",
+            "description": "Potential email detected",
+            "masked_data": "ad***@aimos.local",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"email=\\\\\\\\\\\\\\\"admin@aimos.local\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+          },
+          {
+            "type": "email",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 63,
+            "severity": "medium",
+            "description": "Potential email detected",
+            "masked_data": "ad***@aimos.local",
+            "context": "\"context\": \"\\\"context\\\": \\\"email=\\\\\\\"admin@aimos.local\\\\\\\",\\\"\""
+          },
+          {
+            "type": "email",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 981,
+            "severity": "medium",
+            "description": "Potential email detected",
+            "masked_data": "ad***@aimos.local",
+            "context": "\"context\": \"email=\\\"admin@aimos.local\\\",\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 18,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 18,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 27,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 27,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 72,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 72,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 81,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 81,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 90,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 90,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 99,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 99,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 108,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 108,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 117,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 117,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 126,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 126,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 135,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 135,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 144,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 144,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 153,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 153,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 162,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 162,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 171,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 171,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 180,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 189,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 198,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 207,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 216,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 225,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 234,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 243,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 252,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 261,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 270,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 279,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 288,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 297,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 306,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "phone",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 315,
+            "severity": "medium",
+            "description": "Potential phone detected",
+            "masked_data": "***-***-0000",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 576,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2222",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2222222222222"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 585,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2963",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2962962962962"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 594,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7742",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1935483870967"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 603,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-1132",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1320754716981"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 612,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4878",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2048780487804"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 621,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0339",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1288135593220"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 630,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0789",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1449067431850"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 639,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4462",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1115485564304"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 648,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5474",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1345565749235"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 657,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4135",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1350210970464"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 666,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7647",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.0838235294117"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 675,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5359",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1674641148325"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 684,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2222",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2222222222222222\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 693,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2963",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2962962962962963\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 702,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7742",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1935483870967742\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 711,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-1132",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1320754716981132\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 720,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4878",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2048780487804878\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 729,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0339",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1288135593220339\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 738,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0789",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1449067431850789\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 747,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4462",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1115485564304462\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 756,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5474",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1345565749235474\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 765,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4135",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1350210970464135\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 774,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7647",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.0838235294117647\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 783,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5359",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1674641148325359\\\"\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 873,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2222",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2222222222222222\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 882,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2963",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2962962962962963\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 891,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7742",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1935483870967742\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 900,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-1132",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1320754716981132\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 909,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4878",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2048780487804878\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 918,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0339",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1288135593220339\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 927,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0789",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1449067431850789\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 936,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4462",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1115485564304462\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 945,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5474",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1345565749235474\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 954,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4135",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1350210970464135\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 963,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7647",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.0838235294117647\""
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 972,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5359",
+            "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1674641148325359\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 810,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"host=\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 819,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"host: str = Field(d"
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 828,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"host=\\\\\\\\\\\\\\\"0.0.0.0\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 837,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"host: str = Field(default=\\\\\\\\\\\\\\\"0.0.0.0\\\\\\\\\\\\\\\", e"
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 846,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"host=\\\\\\\"0.0.0.0\\\\\\\",\\\"\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 855,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"\\\"context\\\": \\\"host: str = Field(default=\\\\\\\"0.0.0.0\\\\\\\", env=\\\\\\\"HOST\\\\\\\")\\\"\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 990,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"host=\\\"0.0.0.0\\\",\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 999,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "\"context\": \"host: str = Field(default=\\\"0.0.0.0\\\", env=\\\"HOST\\\")\""
+          },
+          {
+            "type": "ip_address",
+            "file": "./reports/privacy_compliance_report.json",
+            "line": 1008,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "12***.1",
+            "context": "\"context\": \"cors_origins: List[str] = [\\\"http://localhost:3000\\\", \\\"http://localhost:8080\\\", \\\"http:"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 174,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2222",
+            "context": "\"documentation_ratio\": 0.2222222222222222"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 238,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-2963",
+            "context": "\"documentation_ratio\": 0.2962962962962963"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 262,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7742",
+            "context": "\"documentation_ratio\": 0.1935483870967742"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 278,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-1132",
+            "context": "\"documentation_ratio\": 0.1320754716981132"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 318,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4878",
+            "context": "\"documentation_ratio\": 0.2048780487804878"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 342,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0339",
+            "context": "\"documentation_ratio\": 0.1288135593220339"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 366,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-0789",
+            "context": "\"documentation_ratio\": 0.1449067431850789"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 406,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4462",
+            "context": "\"documentation_ratio\": 0.1115485564304462"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 510,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5474",
+            "context": "\"documentation_ratio\": 0.1345565749235474"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 542,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-4135",
+            "context": "\"documentation_ratio\": 0.1350210970464135"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 558,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-7647",
+            "context": "\"documentation_ratio\": 0.0838235294117647"
+          },
+          {
+            "type": "credit_card",
+            "file": "./reports/refactoring_plan.json",
+            "line": 574,
+            "severity": "high",
+            "description": "Potential credit card detected",
+            "masked_data": "****-****-****-5359",
+            "context": "\"documentation_ratio\": 0.1674641148325359"
+          },
+          {
+            "type": "email",
+            "file": "./backend/main.py",
+            "line": 408,
+            "severity": "medium",
+            "description": "Potential email detected",
+            "masked_data": "ad***@aimos.local",
+            "context": "email=\"admin@aimos.local\","
+          },
+          {
+            "type": "ip_address",
+            "file": "./backend/main.py",
+            "line": 1249,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "host=\"0.0.0.0\","
+          },
+          {
+            "type": "ip_address",
+            "file": "./backend/config.py",
+            "line": 20,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "0.***.0",
+            "context": "host: str = Field(default=\"0.0.0.0\", env=\"HOST\")"
+          },
+          {
+            "type": "ip_address",
+            "file": "./backend/config.py",
+            "line": 213,
+            "severity": "low",
+            "description": "Potential ip address detected",
+            "masked_data": "12***.1",
+            "context": "cors_origins: List[str] = [\"http://localhost:3000\", \"http://localhost:8080\", \"http://127.0.0.1:3000\""
+          }
+        ],
+        "data_flow_analysis": {
+          "data_collection_points": [
+            {
+              "location": "services/prompt_memory/app.py",
+              "type": "API endpoint",
+              "description": "Flask app collects data via POST requests"
+            }
+          ],
+          "data_storage_locations": [],
+          "data_transmission_paths": [],
+          "third_party_integrations": []
+        },
+        "consent_management": {
+          "consent_mechanism_exists": false,
+          "consent_tracking": false,
+          "consent_withdrawal": false,
+          "granular_consent": false,
+          "findings": [
+            {
+              "file": "./tests/__init___test.py",
+              "note": "Consent-related code found"
+            },
+            {
+              "file": "./plugins/compliance_agent/__init__.py",
+              "note": "Consent-related code found"
+            },
+            {
+              "file": "./plugins/privacy_agent/__init__.py",
+              "note": "Consent-related code found"
+            }
+          ]
+        },
+        "data_retention": {
+          "retention_policy_exists": false,
+          "automated_deletion": false,
+          "retention_periods_defined": false,
+          "findings": [
+            {
+              "file": "./config.json",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./tests/__init___test.py",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./data/generate_datasets.py",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./core/enhanced_plugin_interface.py",
+              "keyword": "cleanup",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./core/orchestrator/decision_engine.py",
+              "keyword": "cleanup",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./core/self_healing/healing_framework.py",
+              "keyword": "cleanup",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./services/vector_search/vector_engine.py",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./reports/privacy_compliance_report.json",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./reports/compliance_report.json",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./reports/cost_optimization_report.json",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./reports/execution_summary.json",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./plugins/cost_optimization_agent/__init__.py",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./plugins/compliance_agent/__init__.py",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./plugins/voice_agent/__init__.py",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./plugins/privacy_agent/__init__.py",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./backend/main.py",
+              "keyword": "delete",
+              "note": "Potential retention-related code found"
+            },
+            {
+              "file": "./backend/config.py",
+              "keyword": "retention",
+              "note": "Potential retention-related code found"
+            }
+          ]
+        },
+        "privacy_score": 20,
+        "compliance_gaps": [
+          {
+            "framework": "GDPR",
+            "article": "Article 32 - Security of processing",
+            "gap": "PII found in code/data files",
+            "severity": "high",
+            "recommendation": "Remove or encrypt PII, implement data minimization"
+          },
+          {
+            "framework": "GDPR",
+            "article": "Article 7 - Conditions for consent",
+            "gap": "No consent management mechanism",
+            "severity": "critical",
+            "recommendation": "Implement consent collection and tracking system"
+          },
+          {
+            "framework": "GDPR",
+            "article": "Article 5(1)(e) - Storage limitation",
+            "gap": "No data retention policy",
+            "severity": "high",
+            "recommendation": "Define and implement data retention periods"
+          },
+          {
+            "framework": "GDPR",
+            "article": "Article 13 - Information to be provided",
+            "gap": "No privacy policy found",
+            "severity": "high",
+            "recommendation": "Create comprehensive privacy notice"
+          },
+          {
+            "framework": "CCPA",
+            "section": "Section 1798.100",
+            "gap": "Consumer rights not implemented",
+            "severity": "medium",
+            "recommendation": "Implement consumer data access and deletion rights"
+          }
+        ],
+        "privacy_policy": {
+          "privacy_policy_exists": false,
+          "data_processing_documented": false,
+          "user_rights_documented": false,
+          "findings": [
+            {
+              "issue": "No privacy policy found",
+              "recommendation": "Create comprehensive privacy policy documenting data processing"
+            }
+          ]
+        }
+      },
+      "timestamp": "2025-07-21T19:06:21.910302"
+    }
+  }
+}

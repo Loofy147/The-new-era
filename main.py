@@ -2,6 +2,7 @@ from core.plugin_manager import PluginManager
 import json
 import os
 from datetime import datetime
+import asyncio
 
 class AIOperatingSystem:
     def __init__(self):
@@ -59,6 +60,8 @@ class AIOperatingSystem:
             print(f"\n🔄 Running {agent_name}...")
             print("-"*40)
             result = self.agents[agent_name].run()
+            if asyncio.iscoroutine(result):
+                result = asyncio.run(result)
             print(f"✅ {agent_name} completed successfully")
             return result
         else:
@@ -75,6 +78,13 @@ class AIOperatingSystem:
             try:
                 print(f"\n▶️ Starting {name}...")
                 result = agent.run()
+                if asyncio.iscoroutine(result):
+                    result = asyncio.run(result)
+
+                if hasattr(result, 'to_dict'):
+                    result = result.to_dict()
+
+                print(f"Result type for {name}: {type(result)}")
                 results[name] = {
                     "status": "success",
                     "result": result,
@@ -190,7 +200,13 @@ def main():
 
     # For automated execution, run all agents by default
     print("\n🚀 Running full system analysis...")
-    ai_os.run_all_agents()
+    try:
+        ai_os.run_all_agents()
+    except TypeError as e:
+        if "is not JSON serializable" in str(e):
+            print(f"❌ Error: An agent returned a non-serializable object. Please check agent implementations. Details: {e}")
+        else:
+            raise e
 
     # Show final status
     ai_os.show_system_status()

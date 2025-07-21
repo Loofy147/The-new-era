@@ -450,14 +450,14 @@ class AnalyticsInsightsAgent(PluginInterface):
         os.makedirs(os.path.dirname(report_path), exist_ok=True)
         
         with open(report_path, 'w') as f:
-            json.dump(report, f, indent=2)
+            json.dump(report, f, indent=2, default=str)
         
         print(f"📄 Insights report saved to: {report_path}")
         
         # Generate executive dashboard
         self.generate_executive_dashboard(report)
         
-        return report
+        return json.loads(json.dumps(report, default=str))
     
     def generate_executive_summary(self, system_metrics, agent_insights):
         """Generate executive summary of key findings"""

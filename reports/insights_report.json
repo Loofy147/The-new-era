@@ -1,68 +1,410 @@
 {
-  "timestamp": "2025-01-21T10:34:00Z",
-  "generated_by": "InsightsBot",
+  "timestamp": "2025-07-21T19:06:20.689280",
   "executive_summary": {
     "overall_health": "healthy",
-    "total_agents": 9,
-    "active_services": 1,
-    "recent_activity": 15,
+    "total_agents": 13,
+    "active_services": 2,
+    "recent_activity": 9,
     "key_concerns": [
-      "System health below optimal in some areas",
-      "2 high-priority security issues identified"
+      "2 high-priority issues identified"
     ]
   },
   "system_metrics": {
+    "timestamp": "2025-07-21T19:06:20.619561",
     "system_health": {
-      "score": 85,
+      "score": 105,
       "status": "healthy",
       "issues": [],
-      "last_check": "2025-01-21T10:34:00Z"
+      "last_check": "2025-07-21T19:06:20.619649"
     },
     "file_metrics": {
-      "total_files": 45,
-      "python_files": 12,
-      "documentation_files": 8,
-      "configuration_files": 6,
-      "average_file_size": 156.7
+      "total_files": 145,
+      "python_files": 53,
+      "documentation_files": 35,
+      "configuration_files": 19,
+      "largest_files": [
+        {
+          "path": "./dashboard/package-lock.json",
+          "size_kb": 713
+        },
+        {
+          "path": "./core/orchestrator/ai_orchestrator_architect.py",
+          "size_kb": 56
+        },
+        {
+          "path": "./plugins/multimodal_agent/__pycache__/__init__.cpython-312.pyc",
+          "size_kb": 54
+        },
+        {
+          "path": "./core/orchestrator/architecture_optimizer.py",
+          "size_kb": 52
+        },
+        {
+          "path": "./plugins/multimodal_agent/__init__.py",
+          "size_kb": 52
+        }
+      ],
+      "newest_files": [
+        {
+          "path": "./reports/multimodal_agent_report_20250721_190620.md",
+          "modified": "2025-07-21T19:06:20.614806"
+        },
+        {
+          "path": "./plugins/brainstorming_agent/__pycache__/__init__.cpython-312.pyc",
+          "modified": "2025-07-21T19:06:20.610806"
+        },
+        {
+          "path": "./plugins/voice_agent/__pycache__/__init__.cpython-312.pyc",
+          "modified": "2025-07-21T19:06:20.586804"
+        },
+        {
+          "path": "./plugins/insights_agent/__pycache__/__init__.cpython-312.pyc",
+          "modified": "2025-07-21T19:06:20.574803"
+        },
+        {
+          "path": "./plugins/multimodal_agent/__pycache__/__init__.cpython-312.pyc",
+          "modified": "2025-07-21T19:06:20.506797"
+        }
+      ]
     },
     "plugin_metrics": {
-      "total_plugins": 9,
+      "total_plugins": 13,
       "plugin_types": {
-        "agent": 9,
-        "service": 1,
-        "utility": 0
+        "utility": 1,
+        "agent": 12
+      },
+      "plugin_complexity": {
+        "sample_plugin": {
+          "lines_of_code": 9,
+          "classes": 1,
+          "functions": 2,
+          "complexity_score": 3
+        },
+        "multimodal_agent": {
+          "lines_of_code": 1291,
+          "classes": 1,
+          "functions": 40,
+          "complexity_score": 170
+        },
+        "insights_agent": {
+          "lines_of_code": 656,
+          "classes": 2,
+          "functions": 21,
+          "complexity_score": 88
+        },
+        "cost_optimization_agent": {
+          "lines_of_code": 89,
+          "classes": 1,
+          "functions": 6,
+          "complexity_score": 15
+        },
+        "compliance_agent": {
+          "lines_of_code": 227,
+          "classes": 1,
+          "functions": 11,
+          "complexity_score": 34
+        },
+        "voice_agent": {
+          "lines_of_code": 795,
+          "classes": 1,
+          "functions": 23,
+          "complexity_score": 103
+        },
+        "security_agent": {
+          "lines_of_code": 499,
+          "classes": 1,
+          "functions": 16,
+          "complexity_score": 66
+        },
+        "model_refactor_agent": {
+          "lines_of_code": 566,
+          "classes": 3,
+          "functions": 18,
+          "complexity_score": 77
+        },
+        "testing_agent": {
+          "lines_of_code": 449,
+          "classes": 2,
+          "functions": 20,
+          "complexity_score": 66
+        },
+        "brainstorming_agent": {
+          "lines_of_code": 1145,
+          "classes": 1,
+          "functions": 33,
+          "complexity_score": 148
+        },
+        "conversation_design_agent": {
+          "lines_of_code": 390,
+          "classes": 2,
+          "functions": 16,
+          "complexity_score": 57
+        },
+        "architecture_agent": {
+          "lines_of_code": 763,
+          "classes": 1,
+          "functions": 32,
+          "complexity_score": 109
+        },
+        "privacy_agent": {
+          "lines_of_code": 548,
+          "classes": 1,
+          "functions": 19,
+          "complexity_score": 74
+        }
+      },
+      "plugin_health": [
+        {
+          "plugin": "sample_plugin",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "multimodal_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "insights_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "cost_optimization_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "compliance_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "voice_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "security_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "model_refactor_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "testing_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "brainstorming_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "conversation_design_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "architecture_agent",
+          "health_score": 100,
+          "issues": []
+        },
+        {
+          "plugin": "privacy_agent",
+          "health_score": 100,
+          "issues": []
+        }
+      ]
+    },
+    "service_metrics": {
+      "services_count": 2,
+      "service_health": [
+        {
+          "service": "vector_search",
+          "health_score": 50,
+          "endpoints": 0,
+          "issues": [
+            "Missing app.py file"
+          ]
+        },
+        {
+          "service": "prompt_memory",
+          "health_score": 100,
+          "endpoints": 3,
+          "issues": []
+        }
+      ],
+      "api_endpoints": 3
+    }
+  },
+  "agent_insights": {
+    "agent_activity": {},
+    "report_generation": {
+      "security_report": {
+        "last_generated": "2025-07-21T19:05:14.999721",
+        "file_size": 8274,
+        "data_points": 6978
+      },
+      "architecture_design": {
+        "last_generated": "2025-07-21T19:05:15.384455",
+        "file_size": 20018,
+        "data_points": 14220
+      },
+      "privacy_compliance_report": {
+        "last_generated": "2025-07-21T19:05:15.386037",
+        "file_size": 44635,
+        "data_points": 36826
+      },
+      "conversation_design_guide": {
+        "last_generated": "2025-07-21T19:05:15.383123",
+        "file_size": 10806,
+        "data_points": 8173
+      },
+      "compliance_report": {
+        "last_generated": "2025-07-21T19:05:14.998460",
+        "file_size": 2648,
+        "data_points": 2228
+      },
+      "testing_report": {
+        "last_generated": "2025-07-21T19:05:15.381894",
+        "file_size": 137,
+        "data_points": 125
+      },
+      "cost_optimization_report": {
+        "last_generated": "2025-07-21T19:05:14.998101",
+        "file_size": 888,
+        "data_points": 748
+      },
+      "insights_report": {
+        "last_generated": "2025-07-21T19:05:14.996518",
+        "file_size": 10338,
+        "data_points": 7030
+      },
+      "refactoring_plan": {
+        "last_generated": "2025-07-21T19:05:15.240968",
+        "file_size": 27728,
+        "data_points": 19384
       }
+    },
+    "recommendations": [
+      {
+        "type": "security",
+        "priority": "high",
+        "message": "Security score (0) below recommended threshold"
+      },
+      {
+        "type": "privacy",
+        "priority": "high",
+        "message": "Privacy score (20) needs improvement"
+      },
+      {
+        "type": "cost",
+        "priority": "medium",
+        "message": "Significant cost savings ($630.25) identified"
+      }
+    ]
+  },
+  "usage_patterns": {
+    "development_activity": {
+      "recent_files_created": 145,
+      "recent_files_modified": 145,
+      "most_active_directories": [
+        {
+          "directory": "./reports",
+          "changes": 21
+        },
+        {
+          "directory": ".",
+          "changes": 19
+        },
+        {
+          "directory": "./docs",
+          "changes": 14
+        },
+        {
+          "directory": "./tests",
+          "changes": 10
+        },
+        {
+          "directory": "./core/orchestrator",
+          "changes": 8
+        }
+      ]
+    },
+    "file_changes": {
+      "file_types_modified": {
+        ".yml": 1,
+        ".md": 32,
+        ".py": 53,
+        ".html": 3,
+        ".json": 16,
+        ".txt": 3,
+        "no_extension": 2,
+        ".js": 7,
+        ".jsonl": 2,
+        ".css": 1,
+        ".sh": 2,
+        ".pyc": 19,
+        ".ts": 1,
+        ".tf": 1,
+        ".yaml": 2
+      },
+      "size_distribution": {
+        "small": 20,
+        "medium": 68,
+        "large": 57
+      }
+    },
+    "growth_trends": {
+      "project_maturity": "mature",
+      "complexity_trend": "increasing",
+      "recommendations": [
+        "Consider implementing automated testing"
+      ]
     }
   },
   "key_insights": [
     {
       "category": "Architecture",
-      "insight": "System has 9 plugins, indicating good modularity",
+      "insight": "System has 13 plugins, indicating good modularity",
       "impact": "positive"
     },
     {
       "category": "Development",
-      "insight": "45 files modified recently, showing active development",
+      "insight": "145 files modified recently, showing active development",
       "impact": "positive"
     },
     {
       "category": "Services",
       "insight": "System provides 3 API endpoints for external integration",
       "impact": "positive"
+    },
+    {
+      "category": "Security",
+      "insight": "Active security monitoring with automated reporting",
+      "impact": "positive"
     }
   ],
   "recommendations": [
     {
-      "category": "System Health",
-      "priority": "medium",
-      "action": "Increase documentation coverage",
-      "details": "Only 8 documentation files for 45 total files"
+      "type": "security",
+      "priority": "high",
+      "message": "Security score (0) below recommended threshold"
     },
     {
-      "category": "Security",
+      "type": "privacy",
       "priority": "high",
-      "action": "Address security vulnerabilities",
-      "details": "Multiple security issues identified by SecuBot"
+      "message": "Privacy score (20) needs improvement"
+    },
+    {
+      "type": "cost",
+      "priority": "medium",
+      "message": "Significant cost savings ($630.25) identified"
     }
   ]
 }
