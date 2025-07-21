@@ -20,19 +20,15 @@ Our goal is to:
 
 ```bash
 repo-root/
-├── core/                      # Kernel-like logic and agent orchestration
-├── modules/                   # AI tools and agent modules
-│   ├── training/              # Training logic and protocol implementations
-│   ├── cost-optimization/     # Infrastructure analysis agents
-│   ├── compliance-auditing/   # Security & compliance checking agents
-│   └── conversation-design/   # Dialogue design and chatbot modeling tools
+├── AGENTS.md                 # Standardized operational guidelines for all AI agents
+├── INSTRUCTIONS.md           # Main AI agent instruction guide
+├── README.md                 # Entry point (this file)
+├── code_of_conduct.md        # Code of Conduct
+├── contributing.md           # Contribution guidelines
+├── docs/                     # Design documents, evolution plans, audits
 ├── prompts/                  # Base prompt context and role definitions
 ├── protocols/                # LLM interaction protocols and collaboration rules
-├── docs/                     # Design documents, evolution plans, audits
-│   ├── INSTRUCTIONS.md       # Main AI agent instruction guide ✅
-│   └── ARCHITECTURE.md       # System architecture blueprint (WIP)
-├── README.md                 # Entry point (this file)
-└── .gitignore
+└── ...
 ```
 
 ---
@@ -64,7 +60,7 @@ We provide an extensible list of **predefined roles** for AI-based tools/agents:
 
 If you're an AI model, tool, or developer:
 
-✅ Begin by reading [`INSTRUCTIONS.md`](./docs/INSTRUCTIONS.md). This file defines:
+✅ Begin by reading [`INSTRUCTIONS.md`](./INSTRUCTIONS.md). This file defines:
 
 * How to reason about contributions
 * How to validate and document changes
