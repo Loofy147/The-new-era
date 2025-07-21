@@ -33,6 +33,7 @@ This repository utilizes a variety of AI agents, each with a specific role and s
 | **Security Hardening Agent**    | Inspects the system for vulnerabilities and patches.   |
 | **Analytics & Insights Agent**  | Gathers system KPIs, produces insights.                |
 | **Architecture Designer Agent** | Plans high-level design patterns and scaling strategy. |
+| **Plugin Manager**              | Discovers and runs plugins.                            |
 
 ---
 
