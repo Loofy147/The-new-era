@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from pathlib import Path
-from src.prompt_memory import PromptMemory
+from src import PromptMemory
 
 app = Flask(__name__)
 

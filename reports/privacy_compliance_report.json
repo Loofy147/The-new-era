@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-01-21T10:32:00Z",
+  "generated_by": "PrivacyGuard",
+  "scan_type": "privacy_compliance",
+  "frameworks_checked": ["GDPR", "CCPA", "PIPEDA", "LGPD"],
+  "privacy_score": 67,
+  "pii_findings": [
+    {
+      "type": "email",
+      "file": "docs/contributing.md",
+      "line": 24,
+      "severity": "medium",
+      "description": "Potential email detected",
+      "masked_data": "yo***@example.com"
+    }
+  ],
+  "data_flow_analysis": {
+    "data_collection_points": [
+      {
+        "location": "services/prompt_memory/app.py",
+        "type": "API endpoint",
+        "description": "Flask app collects data via POST requests"
+      }
+    ],
+    "data_storage_locations": [
+      {
+        "location": "services/prompt_memory/prompts.json",
+        "type": "Local file storage",
+        "description": "Prompts stored in JSON file"
+      }
+    ]
+  },
+  "consent_management": {
+    "consent_mechanism_exists": false,
+    "consent_tracking": false,
+    "consent_withdrawal": false,
+    "findings": [
+      {
+        "issue": "No consent management mechanism found",
+        "recommendation": "Implement GDPR-compliant consent management"
+      }
+    ]
+  },
+  "compliance_gaps": [
+    {
+      "framework": "GDPR",
+      "article": "Article 7 - Conditions for consent",
+      "gap": "No consent management mechanism",
+      "severity": "critical",
+      "recommendation": "Implement consent collection and tracking system"
+    },
+    {
+      "framework": "GDPR",
+      "article": "Article 5(1)(e) - Storage limitation",
+      "gap": "No data retention policy",
+      "severity": "high",
+      "recommendation": "Define and implement data retention periods"
+    }
+  ]
+}

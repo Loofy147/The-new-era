@@ -1,0 +1,29 @@
+{
+  "name": "aimos-cli",
+  "version": "1.0.0",
+  "description": "AI Operating System Command Line Interface",
+  "main": "src/index.js",
+  "bin": {
+    "aimos": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js",
+    "lint": "eslint src/",
+    "test": "jest"
+  },
+  "keywords": ["ai", "operating-system", "cli", "agents"],
+  "author": "AI Operating System Framework",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.5",
+    "axios": "^1.2.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "eslint": "^8.28.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-01-21T10:33:00Z",
+  "generated_by": "ComplianceBot",
+  "frameworks_checked": ["GDPR", "HIPAA", "PCI-DSS", "SOX", "ISO27001"],
+  "overall_score": 78,
+  "findings": [
+    {
+      "framework": "GDPR",
+      "category": "Data Protection",
+      "severity": "high",
+      "finding": "No explicit data retention policy found",
+      "recommendation": "Implement data retention and deletion policies",
+      "article": "Article 5(1)(e) - Storage limitation"
+    },
+    {
+      "framework": "HIPAA",
+      "category": "Access Controls",
+      "severity": "critical",
+      "finding": "PHI access controls not properly configured",
+      "recommendation": "Implement role-based access controls for PHI",
+      "safeguard": "Administrative Safeguards § 164.308(a)(4)"
+    },
+    {
+      "framework": "PCI-DSS",
+      "category": "Network Security",
+      "severity": "critical",
+      "finding": "Default passwords detected in configuration",
+      "recommendation": "Change all default passwords and implement strong password policy",
+      "requirement": "Requirement 2.1"
+    }
+  ],
+  "total_findings": 8,
+  "critical_findings": 2,
+  "remediation_timeline": {
+    "immediate": 2,
+    "30_days": 3,
+    "90_days": 3
+  }
+}
