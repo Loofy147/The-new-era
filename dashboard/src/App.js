@@ -26,11 +26,6 @@ import {
 import './App.css';
 import Orchestrator from './components/Orchestrator';
 
-// Animated Background Component
-const AnimatedBackground = () => (
-  <div className="animated-background" />
-);
-
 // Navigation Component
 const Navigation = ({ isOpen, toggleSidebar }) => {
   const location = useLocation();
@@ -69,7 +64,7 @@ const Navigation = ({ isOpen, toggleSidebar }) => {
 };
 
 // Header Component
-const Header = ({ toggleSidebar }) => {
+const Header = ({ toggleSidebar, toggleTheme, currentTheme }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -87,7 +82,7 @@ const Header = ({ toggleSidebar }) => {
         >
           <MenuOutlined />
         </button>
-        <h2 className="header-title">AI Operating System Framework</h2>
+        <h2 className="header-title">AI Operating System</h2>
       </div>
       
       <div className="header-actions">
@@ -99,6 +94,9 @@ const Header = ({ toggleSidebar }) => {
         </button>
         <button className="btn btn-secondary">
           <BellOutlined />
+        </button>
+        <button className="btn btn-secondary" onClick={toggleTheme}>
+          {currentTheme === 'light' ? '🌙' : '☀️'}
         </button>
         <button className="btn btn-secondary">
           <UserOutlined />
@@ -260,7 +258,7 @@ const Dashboard = () => {
   return (
     <div className="main-content">
       <div className="page-header">
-        <h1 className="text-gradient">AI Operating System Dashboard</h1>
+        <h1>AI Operating System Dashboard</h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
           Monitor and manage your intelligent agent ecosystem
         </p>
@@ -298,7 +296,7 @@ const Dashboard = () => {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: '24px', marginTop: '32px' }}>
-        <div className="glass-card">
+        <div className="card">
           <div className="card-header">
             <h3 className="card-title">Recent Agent Activity</h3>
             <button className="btn btn-secondary">
@@ -314,7 +312,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="glass-card">
+        <div className="card">
           <div className="card-header">
             <h3 className="card-title">System Overview</h3>
           </div>
@@ -361,7 +359,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="glass-card" style={{ marginTop: '32px' }}>
+      <div className="card" style={{ marginTop: '32px' }}>
         <div className="card-header">
           <h3 className="card-title">Quick Actions</h3>
           <p className="card-subtitle">Frequently used system operations</p>
@@ -478,7 +476,7 @@ const Agents = () => {
   return (
     <div className="main-content">
       <div className="page-header">
-        <h1 className="text-gradient">AI Agent Management</h1>
+        <h1>AI Agent Management</h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
           Monitor and control your intelligent automation agents
         </p>
@@ -507,7 +505,7 @@ const Agents = () => {
         />
       </div>
 
-      <div className="glass-card">
+      <div className="card">
         <div className="card-header">
           <h3 className="card-title">Agent Fleet</h3>
           <div style={{ display: 'flex', gap: '8px' }}>
@@ -608,13 +606,13 @@ const Reports = () => {
   return (
     <div className="main-content">
       <div className="page-header">
-        <h1 className="text-gradient">Generated Reports</h1>
+        <h1>Generated Reports</h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
           Access and download AI-generated analysis reports
         </p>
       </div>
 
-      <div className="glass-card">
+      <div className="card">
         <div className="card-header">
           <h3 className="card-title">Available Reports</h3>
           <button className="btn btn-primary">
@@ -658,7 +656,7 @@ const Security = () => {
   return (
     <div className="main-content">
       <div className="page-header">
-        <h1 className="text-gradient">Security Center</h1>
+        <h1>Security Center</h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
           Monitor system security and manage threat protection
         </p>
@@ -695,7 +693,7 @@ const Security = () => {
         />
       </div>
 
-      <div className="glass-card" style={{ marginTop: '32px' }}>
+      <div className="card" style={{ marginTop: '32px' }}>
         <div className="card-header">
           <h3 className="card-title">Security Operations</h3>
         </div>
@@ -750,14 +748,14 @@ const Settings = () => {
   return (
     <div className="main-content">
       <div className="page-header">
-        <h1 className="text-gradient">System Settings</h1>
+        <h1>System Settings</h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
           Configure system behavior and preferences
         </p>
       </div>
 
       <div className="settings-grid">
-        <div className="settings-section">
+        <div className="card">
           <h3 className="settings-title">
             <SettingOutlined />
             General Settings
@@ -788,7 +786,7 @@ const Settings = () => {
           </div>
         </div>
 
-        <div className="settings-section">
+        <div className="card">
           <h3 className="settings-title">
             <RobotOutlined />
             Agent Features
@@ -834,10 +832,20 @@ const Settings = () => {
 // Main App Component
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [theme, setTheme] = useState('dark'); // Add theme state
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
+  // Add theme toggling function
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  useEffect(() => {
+    document.body.className = `${theme}-theme`;
+  }, [theme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -853,12 +861,10 @@ function App() {
   return (
     <Router>
       <div className="main-layout">
-        <AnimatedBackground />
-        
         <Navigation isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         
         <div className="main-wrapper">
-          <Header toggleSidebar={toggleSidebar} />
+          <Header toggleSidebar={toggleSidebar} toggleTheme={toggleTheme} currentTheme={theme} />
           
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -881,7 +887,7 @@ function App() {
               right: 0,
               bottom: 0,
               background: 'rgba(0, 0, 0, 0.5)',
-              zIndex: 99,
+              zIndex: 999,
               display: window.innerWidth <= 768 ? 'block' : 'none'
             }}
           />
