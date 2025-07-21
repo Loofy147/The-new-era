@@ -20,9 +20,11 @@ import {
   EyeOutlined,
   DownloadOutlined,
   ArrowUpOutlined,
-  ArrowDownOutlined
+  ArrowDownOutlined,
+  ApiOutlined
 } from '@ant-design/icons';
 import './App.css';
+import Orchestrator from './components/Orchestrator';
 
 // Animated Background Component
 const AnimatedBackground = () => (
@@ -35,6 +37,7 @@ const Navigation = ({ isOpen, toggleSidebar }) => {
   
   const navigationItems = [
     { key: '/', icon: <DashboardOutlined />, label: 'Dashboard' },
+    { key: '/orchestrator', icon: <ApiOutlined />, label: 'Orchestrator' },
     { key: '/agents', icon: <RobotOutlined />, label: 'AI Agents' },
     { key: '/reports', icon: <FileTextOutlined />, label: 'Reports' },
     { key: '/security', icon: <SecurityScanOutlined />, label: 'Security' },
@@ -859,6 +862,7 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/orchestrator" element={<Orchestrator />} />
             <Route path="/agents" element={<Agents />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/security" element={<Security />} />
