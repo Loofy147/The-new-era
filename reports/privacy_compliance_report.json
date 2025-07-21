@@ -1,17 +1,1011 @@
 {
-  "timestamp": "2025-01-21T10:32:00Z",
-  "generated_by": "PrivacyGuard",
+  "timestamp": "2025-07-21T19:06:21.165699",
   "scan_type": "privacy_compliance",
-  "frameworks_checked": ["GDPR", "CCPA", "PIPEDA", "LGPD"],
-  "privacy_score": 67,
+  "frameworks_checked": [
+    "GDPR",
+    "CCPA",
+    "PIPEDA",
+    "LGPD"
+  ],
   "pii_findings": [
     {
+      "type": "phone",
+      "file": "./core/orchestrator/performance_analyzer.py",
+      "line": 637,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB"
+    },
+    {
+      "type": "phone",
+      "file": "./core/orchestrator/performance_analyzer.py",
+      "line": 637,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB"
+    },
+    {
       "type": "email",
-      "file": "docs/contributing.md",
-      "line": 24,
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 45,
       "severity": "medium",
       "description": "Potential email detected",
-      "masked_data": "yo***@example.com"
+      "masked_data": "ad***@aimos.local",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"email=\\\\\\\\\\\\\\\\\\\\\\\\\\"
+    },
+    {
+      "type": "email",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 54,
+      "severity": "medium",
+      "description": "Potential email detected",
+      "masked_data": "ad***@aimos.local",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"email=\\\\\\\\\\\\\\\"admin@aimos.local\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+      "type": "email",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 63,
+      "severity": "medium",
+      "description": "Potential email detected",
+      "masked_data": "ad***@aimos.local",
+      "context": "\"context\": \"\\\"context\\\": \\\"email=\\\\\\\"admin@aimos.local\\\\\\\",\\\"\""
+    },
+    {
+      "type": "email",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 981,
+      "severity": "medium",
+      "description": "Potential email detected",
+      "masked_data": "ad***@aimos.local",
+      "context": "\"context\": \"email=\\\"admin@aimos.local\\\",\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 18,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 18,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 27,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 27,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 72,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 72,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 81,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 81,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 90,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 90,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 99,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 99,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"if network_sent > 1000000000 or network_recv > 1000000000:  # 1GB\\\"\""
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 108,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 108,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 117,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 117,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 126,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 126,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 135,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 135,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 144,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 144,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 153,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 153,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 162,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 162,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 171,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 171,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"if network_sent > 1000000000 or network_recv > 10000"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 180,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 189,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 198,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 207,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 216,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 225,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 234,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 243,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 252,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 261,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 270,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 279,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 288,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 297,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 306,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "phone",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 315,
+      "severity": "medium",
+      "description": "Potential phone detected",
+      "masked_data": "***-***-0000",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"if network_sent > 1"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 576,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2222",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2222222222222"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 585,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2963",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2962962962962"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 594,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7742",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1935483870967"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 603,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-1132",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1320754716981"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 612,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4878",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.2048780487804"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 621,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0339",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1288135593220"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 630,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0789",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1449067431850"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 639,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4462",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1115485564304"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 648,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5474",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1345565749235"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 657,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4135",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1350210970464"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 666,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7647",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.0838235294117"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 675,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5359",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"documentation_ratio\\\\\\\\\\\\\\\": 0.1674641148325"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 684,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2222",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2222222222222222\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 693,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2963",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2962962962962963\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 702,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7742",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1935483870967742\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 711,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-1132",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1320754716981132\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 720,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4878",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.2048780487804878\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 729,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0339",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1288135593220339\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 738,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0789",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1449067431850789\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 747,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4462",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1115485564304462\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 756,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5474",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1345565749235474\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 765,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4135",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1350210970464135\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 774,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7647",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.0838235294117647\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 783,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5359",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"documentation_ratio\\\\\\\": 0.1674641148325359\\\"\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 873,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2222",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2222222222222222\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 882,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2963",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2962962962962963\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 891,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7742",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1935483870967742\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 900,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-1132",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1320754716981132\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 909,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4878",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.2048780487804878\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 918,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0339",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1288135593220339\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 927,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0789",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1449067431850789\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 936,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4462",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1115485564304462\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 945,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5474",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1345565749235474\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 954,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4135",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1350210970464135\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 963,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7647",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.0838235294117647\""
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 972,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5359",
+      "context": "\"context\": \"\\\"documentation_ratio\\\": 0.1674641148325359\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 810,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"host=\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 819,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"\\\\\\\\\\\\\\\"context\\\\\\\\\\\\\\\": \\\\\\\\\\\\\\\"host: str = Field(d"
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 828,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"host=\\\\\\\\\\\\\\\"0.0.0.0\\\\\\\\\\\\\\\",\\\\\\\"\\\"\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 837,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"\\\\\\\"context\\\\\\\": \\\\\\\"host: str = Field(default=\\\\\\\\\\\\\\\"0.0.0.0\\\\\\\\\\\\\\\", e"
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 846,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"host=\\\\\\\"0.0.0.0\\\\\\\",\\\"\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 855,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"\\\"context\\\": \\\"host: str = Field(default=\\\\\\\"0.0.0.0\\\\\\\", env=\\\\\\\"HOST\\\\\\\")\\\"\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 990,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"host=\\\"0.0.0.0\\\",\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 999,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "\"context\": \"host: str = Field(default=\\\"0.0.0.0\\\", env=\\\"HOST\\\")\""
+    },
+    {
+      "type": "ip_address",
+      "file": "./reports/privacy_compliance_report.json",
+      "line": 1008,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "12***.1",
+      "context": "\"context\": \"cors_origins: List[str] = [\\\"http://localhost:3000\\\", \\\"http://localhost:8080\\\", \\\"http:"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 174,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2222",
+      "context": "\"documentation_ratio\": 0.2222222222222222"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 238,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-2963",
+      "context": "\"documentation_ratio\": 0.2962962962962963"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 262,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7742",
+      "context": "\"documentation_ratio\": 0.1935483870967742"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 278,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-1132",
+      "context": "\"documentation_ratio\": 0.1320754716981132"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 318,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4878",
+      "context": "\"documentation_ratio\": 0.2048780487804878"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 342,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0339",
+      "context": "\"documentation_ratio\": 0.1288135593220339"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 366,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-0789",
+      "context": "\"documentation_ratio\": 0.1449067431850789"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 406,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4462",
+      "context": "\"documentation_ratio\": 0.1115485564304462"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 510,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5474",
+      "context": "\"documentation_ratio\": 0.1345565749235474"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 542,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-4135",
+      "context": "\"documentation_ratio\": 0.1350210970464135"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 558,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-7647",
+      "context": "\"documentation_ratio\": 0.0838235294117647"
+    },
+    {
+      "type": "credit_card",
+      "file": "./reports/refactoring_plan.json",
+      "line": 574,
+      "severity": "high",
+      "description": "Potential credit card detected",
+      "masked_data": "****-****-****-5359",
+      "context": "\"documentation_ratio\": 0.1674641148325359"
+    },
+    {
+      "type": "email",
+      "file": "./backend/main.py",
+      "line": 408,
+      "severity": "medium",
+      "description": "Potential email detected",
+      "masked_data": "ad***@aimos.local",
+      "context": "email=\"admin@aimos.local\","
+    },
+    {
+      "type": "ip_address",
+      "file": "./backend/main.py",
+      "line": 1249,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "host=\"0.0.0.0\","
+    },
+    {
+      "type": "ip_address",
+      "file": "./backend/config.py",
+      "line": 20,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "0.***.0",
+      "context": "host: str = Field(default=\"0.0.0.0\", env=\"HOST\")"
+    },
+    {
+      "type": "ip_address",
+      "file": "./backend/config.py",
+      "line": 213,
+      "severity": "low",
+      "description": "Potential ip address detected",
+      "masked_data": "12***.1",
+      "context": "cors_origins: List[str] = [\"http://localhost:3000\", \"http://localhost:8080\", \"http://127.0.0.1:3000\""
     }
   ],
   "data_flow_analysis": {
@@ -22,26 +1016,131 @@
         "description": "Flask app collects data via POST requests"
       }
     ],
-    "data_storage_locations": [
-      {
-        "location": "services/prompt_memory/prompts.json",
-        "type": "Local file storage",
-        "description": "Prompts stored in JSON file"
-      }
-    ]
+    "data_storage_locations": [],
+    "data_transmission_paths": [],
+    "third_party_integrations": []
   },
   "consent_management": {
     "consent_mechanism_exists": false,
     "consent_tracking": false,
     "consent_withdrawal": false,
+    "granular_consent": false,
     "findings": [
       {
-        "issue": "No consent management mechanism found",
-        "recommendation": "Implement GDPR-compliant consent management"
+        "file": "./tests/__init___test.py",
+        "note": "Consent-related code found"
+      },
+      {
+        "file": "./plugins/compliance_agent/__init__.py",
+        "note": "Consent-related code found"
+      },
+      {
+        "file": "./plugins/privacy_agent/__init__.py",
+        "note": "Consent-related code found"
       }
     ]
   },
+  "data_retention": {
+    "retention_policy_exists": false,
+    "automated_deletion": false,
+    "retention_periods_defined": false,
+    "findings": [
+      {
+        "file": "./config.json",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./tests/__init___test.py",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./data/generate_datasets.py",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./core/enhanced_plugin_interface.py",
+        "keyword": "cleanup",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./core/orchestrator/decision_engine.py",
+        "keyword": "cleanup",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./core/self_healing/healing_framework.py",
+        "keyword": "cleanup",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./services/vector_search/vector_engine.py",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./reports/privacy_compliance_report.json",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./reports/compliance_report.json",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./reports/cost_optimization_report.json",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./reports/execution_summary.json",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./plugins/cost_optimization_agent/__init__.py",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./plugins/compliance_agent/__init__.py",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./plugins/voice_agent/__init__.py",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./plugins/privacy_agent/__init__.py",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./backend/main.py",
+        "keyword": "delete",
+        "note": "Potential retention-related code found"
+      },
+      {
+        "file": "./backend/config.py",
+        "keyword": "retention",
+        "note": "Potential retention-related code found"
+      }
+    ]
+  },
+  "privacy_score": 20,
   "compliance_gaps": [
+    {
+      "framework": "GDPR",
+      "article": "Article 32 - Security of processing",
+      "gap": "PII found in code/data files",
+      "severity": "high",
+      "recommendation": "Remove or encrypt PII, implement data minimization"
+    },
     {
       "framework": "GDPR",
       "article": "Article 7 - Conditions for consent",
@@ -55,6 +1154,31 @@
       "gap": "No data retention policy",
       "severity": "high",
       "recommendation": "Define and implement data retention periods"
+    },
+    {
+      "framework": "GDPR",
+      "article": "Article 13 - Information to be provided",
+      "gap": "No privacy policy found",
+      "severity": "high",
+      "recommendation": "Create comprehensive privacy notice"
+    },
+    {
+      "framework": "CCPA",
+      "section": "Section 1798.100",
+      "gap": "Consumer rights not implemented",
+      "severity": "medium",
+      "recommendation": "Implement consumer data access and deletion rights"
     }
-  ]
+  ],
+  "privacy_policy": {
+    "privacy_policy_exists": false,
+    "data_processing_documented": false,
+    "user_rights_documented": false,
+    "findings": [
+      {
+        "issue": "No privacy policy found",
+        "recommendation": "Create comprehensive privacy policy documenting data processing"
+      }
+    ]
+  }
 }

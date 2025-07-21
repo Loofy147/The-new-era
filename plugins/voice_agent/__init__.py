@@ -140,25 +140,25 @@ class VoiceAgent(EnhancedPluginInterface, VoiceCapability, SelfHealingMixin):
             
             self.log_info(f"Voice Agent analysis completed in {execution_time:.2f}ms")
             
-            return ExecutionResult(
-                status=ExecutionStatus.SUCCESS,
-                data=results,
-                execution_time_ms=int(execution_time),
-                metadata={
+            return {
+                'status': 'success',
+                'data': results,
+                'execution_time_ms': int(execution_time),
+                'metadata': {
                     'report_path': report_path,
                     'voice_capabilities_available': VOICE_DEPENDENCIES_AVAILABLE,
                     'total_voice_interactions': self.total_voice_interactions,
                     'recognition_accuracy': self.recognition_accuracy
                 }
-            )
+            }
             
         except Exception as e:
             self.log_error(f"Voice Agent execution failed: {e}")
-            return ExecutionResult(
-                status=ExecutionStatus.FAILED,
-                error=e,
-                execution_time_ms=0
-            )
+            return {
+                'status': 'failed',
+                'error': str(e),
+                'execution_time_ms': 0
+            }
     
     async def health_check(self) -> HealthCheckResult:
         """Perform health check for voice agent"""

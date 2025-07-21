@@ -124,17 +124,17 @@ class MultiModalAgent(EnhancedPluginInterface, MultiModalCapability, SelfHealing
             
             self.log_info(f"Multi-Modal Agent analysis completed in {execution_time:.2f}ms")
             
-            return ExecutionResult(
-                status=ExecutionStatus.SUCCESS,
-                data=results,
-                execution_time_ms=int(execution_time),
-                metadata={
+            return {
+                'status': 'success',
+                'data': results,
+                'execution_time_ms': int(execution_time),
+                'metadata': {
                     'report_path': report_path,
                     'supported_modalities': self.supported_modalities,
                     'total_processed': self.total_processed,
                     'fusion_success_rate': self.successful_fusions / max(1, len(self.fusion_history))
                 }
-            )
+            }
             
         except Exception as e:
             self.log_error(f"Multi-Modal Agent execution failed: {e}")
