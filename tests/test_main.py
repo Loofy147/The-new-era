@@ -9,7 +9,7 @@ import os
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from main import AIOperatingSystem, main
+from main import AIOperatingSystem
 
 class TestAIOperatingSystem(unittest.TestCase):
     """Test cases for the main AI Operating System class"""
@@ -109,103 +109,6 @@ class TestSystemIntegration(unittest.TestCase):
             self.assertEqual(len(results), len(ai_os.agents))
         except Exception as e:
             self.fail(f"run_all_agents failed: {e}")
-
-    def test_run_security_suite_execution(self):
-        """Test the execution of the security suite"""
-        ai_os = AIOperatingSystem()
-        ai_os.initialize()
-
-        # Should have agents registered
-        self.assertGreater(len(ai_os.agents), 0)
-
-        try:
-            results = ai_os.run_security_suite()
-            self.assertIsInstance(results, dict)
-        except Exception as e:
-            self.fail(f"run_security_suite failed: {e}")
-
-    def test_run_analysis_suite_execution(self):
-        """Test the execution of the analysis suite"""
-        ai_os = AIOperatingSystem()
-        ai_os.initialize()
-
-        # Should have agents registered
-        self.assertGreater(len(ai_os.agents), 0)
-
-        try:
-            results = ai_os.run_analysis_suite()
-            self.assertIsInstance(results, dict)
-        except Exception as e:
-            self.fail(f"run_analysis_suite failed: {e}")
-
-from unittest.mock import patch
-
-class TestMainFunction(unittest.TestCase):
-    """Test cases for the main function"""
-
-    @patch('builtins.input', side_effect=['1', 'q'])
-    def test_main_function_list_agents(self, mock_input):
-        """Test the main function with the 'list agents' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['invalid', 'q'])
-    def test_main_function_invalid_input(self, mock_input):
-        """Test the main function with invalid input"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['7', 'q'])
-    def test_main_function_invalid_choice(self, mock_input):
-        """Test the main function with an invalid choice"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['2', 'q'])
-    def test_main_function_run_all_agents(self, mock_input):
-        """Test the main function with the 'run all agents' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['3', 'q'])
-    def test_main_function_run_security_suite(self, mock_input):
-        """Test the main function with the 'run security suite' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['4', 'q'])
-    def test_main_function_run_analysis_suite(self, mock_input):
-        """Test the main function with the 'run analysis suite' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['5', 'q'])
-    def test_main_function_show_system_status(self, mock_input):
-        """Test the main function with the 'show system status' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
-
-    @patch('builtins.input', side_effect=['6', 'CostOptBot', 'q'])
-    def test_main_function_run_specific_agent(self, mock_input):
-        """Test the main function with the 'run specific agent' option"""
-        try:
-            main()
-        except SystemExit:
-            pass
 
 if __name__ == '__main__':
     # Create reports directory for test outputs

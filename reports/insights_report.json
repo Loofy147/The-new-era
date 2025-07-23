@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-23T01:46:35.753570",
+  "timestamp": "2025-07-23T01:20:38.330265",
   "executive_summary": {
     "overall_health": "healthy",
     "total_agents": 13,
@@ -10,18 +10,18 @@
     ]
   },
   "system_metrics": {
-    "timestamp": "2025-07-23T01:46:35.667786",
+    "timestamp": "2025-07-23T01:20:38.244176",
     "system_health": {
       "score": 105,
       "status": "healthy",
       "issues": [],
-      "last_check": "2025-07-23T01:46:35.667953"
+      "last_check": "2025-07-23T01:20:38.244266"
     },
     "file_metrics": {
-      "total_files": 187,
+      "total_files": 150,
       "python_files": 53,
-      "documentation_files": 69,
-      "configuration_files": 20,
+      "documentation_files": 39,
+      "configuration_files": 19,
       "largest_files": [
         {
           "path": "./dashboard/package-lock.json",
@@ -29,11 +29,11 @@
         },
         {
           "path": "./reports/execution_summary.json",
-          "size_kb": 494
+          "size_kb": 478
         },
         {
           "path": "./reports/privacy_compliance_report.json",
-          "size_kb": 327
+          "size_kb": 324
         },
         {
           "path": "./core/orchestrator/ai_orchestrator_architect.py",
@@ -46,24 +46,24 @@
       ],
       "newest_files": [
         {
-          "path": "./reports/cost_optimization_report.json",
-          "modified": "2025-07-23T01:46:35.665786"
+          "path": "./reports/refactoring_plan.json",
+          "modified": "2025-07-23T01:20:38.239460"
+        },
+        {
+          "path": "./docs/refactoring_guide.md",
+          "modified": "2025-07-23T01:20:38.239460"
+        },
+        {
+          "path": "./plugins/insights_agent/__pycache__/__init__.cpython-312.pyc",
+          "modified": "2025-07-23T01:20:38.095444"
+        },
+        {
+          "path": "./__pycache__/main.cpython-312.pyc",
+          "modified": "2025-07-23T01:20:38.023437"
         },
         {
           "path": "./reports/execution_summary.json",
-          "modified": "2025-07-23T01:46:35.657784"
-        },
-        {
-          "path": "./reports/architecture_design.json",
-          "modified": "2025-07-23T01:46:35.637782"
-        },
-        {
-          "path": "./docs/architecture_blueprint.md",
-          "modified": "2025-07-23T01:46:35.637782"
-        },
-        {
-          "path": "./docs/testing_guidelines.md",
-          "modified": "2025-07-23T01:46:35.633781"
+          "modified": "2025-07-23T01:20:36.443266"
         }
       ]
     },
@@ -246,47 +246,47 @@
     "agent_activity": {},
     "report_generation": {
       "compliance_report": {
-        "last_generated": "2025-07-23T01:46:34.369632",
+        "last_generated": "2025-07-23T01:19:37.485820",
         "file_size": 2648,
         "data_points": 2228
       },
       "cost_optimization_report": {
-        "last_generated": "2025-07-23T01:46:35.667395",
+        "last_generated": "2025-07-23T01:19:38.616419",
         "file_size": 888,
         "data_points": 748
       },
       "testing_report": {
-        "last_generated": "2025-07-23T01:46:35.640764",
+        "last_generated": "2025-07-23T01:19:38.760116",
         "file_size": 137,
         "data_points": 125
       },
       "security_report": {
-        "last_generated": "2025-07-23T01:46:34.184468",
+        "last_generated": "2025-07-23T01:19:37.291692",
         "file_size": 8274,
         "data_points": 6978
       },
       "insights_report": {
-        "last_generated": "2025-07-23T01:46:34.182660",
-        "file_size": 10191,
-        "data_points": 6883
+        "last_generated": "2025-07-23T01:19:37.290168",
+        "file_size": 10219,
+        "data_points": 6911
       },
       "privacy_compliance_report": {
-        "last_generated": "2025-07-23T01:46:34.370260",
-        "file_size": 335502,
-        "data_points": 279538
+        "last_generated": "2025-07-23T01:19:37.486547",
+        "file_size": 332616,
+        "data_points": 277102
       },
       "conversation_design_guide": {
-        "last_generated": "2025-07-23T01:46:35.502658",
+        "last_generated": "2025-07-23T01:19:38.616803",
         "file_size": 10806,
         "data_points": 8173
       },
       "execution_summary": {
-        "last_generated": "2025-07-23T01:46:35.644186",
-        "file_size": 505885,
-        "data_points": 352138
+        "last_generated": "2025-07-23T01:19:38.763510",
+        "file_size": 489882,
+        "data_points": 342787
       },
       "architecture_design": {
-        "last_generated": "2025-07-23T01:46:35.641732",
+        "last_generated": "2025-07-23T01:19:38.761054",
         "file_size": 20018,
         "data_points": 14220
       }
@@ -311,16 +311,16 @@
   },
   "usage_patterns": {
     "development_activity": {
-      "recent_files_created": 187,
-      "recent_files_modified": 187,
+      "recent_files_created": 150,
+      "recent_files_modified": 150,
       "most_active_directories": [
         {
           "directory": "./reports",
-          "changes": 55
+          "changes": 25
         },
         {
           "directory": ".",
-          "changes": 20
+          "changes": 19
         },
         {
           "directory": "./docs",
@@ -338,8 +338,8 @@
     },
     "file_changes": {
       "file_types_modified": {
-        ".md": 66,
-        ".json": 17,
+        ".md": 36,
+        ".json": 16,
         ".py": 53,
         ".txt": 3,
         ".html": 3,
@@ -347,7 +347,7 @@
         ".yml": 1,
         ".js": 7,
         ".css": 1,
-        ".pyc": 26,
+        ".pyc": 20,
         ".tf": 1,
         ".yaml": 2,
         ".ts": 1,
@@ -356,7 +356,7 @@
       },
       "size_distribution": {
         "small": 20,
-        "medium": 109,
+        "medium": 72,
         "large": 58
       }
     },
@@ -376,7 +376,7 @@
     },
     {
       "category": "Development",
-      "insight": "187 files modified recently, showing active development",
+      "insight": "150 files modified recently, showing active development",
       "impact": "positive"
     },
     {
