@@ -264,6 +264,8 @@ class AnalyticsInsightsAgent(PluginInterface):
             report_files = glob.glob('reports/*.json')
             
             for report_file in report_files:
+                if "refactoring_plan" in report_file:
+                    continue
                 try:
                     with open(report_file, 'r') as f:
                         report_data = json.load(f)
@@ -279,7 +281,7 @@ class AnalyticsInsightsAgent(PluginInterface):
                         }
                         
                         # Analyze specific report types
-                        if 'security_score' in report_data:
+                        if 'security_score' in report_data and report_data['security_score'] is not None:
                             score = report_data['security_score']
                             if score < 70:
                                 insights["recommendations"].append({
@@ -288,7 +290,7 @@ class AnalyticsInsightsAgent(PluginInterface):
                                     "message": f"Security score ({score}) below recommended threshold"
                                 })
                         
-                        if 'privacy_score' in report_data:
+                        if 'privacy_score' in report_data and report_data['privacy_score'] is not None:
                             score = report_data['privacy_score']
                             if score < 80:
                                 insights["recommendations"].append({
@@ -297,7 +299,7 @@ class AnalyticsInsightsAgent(PluginInterface):
                                     "message": f"Privacy score ({score}) needs improvement"
                                 })
                         
-                        if 'total_potential_savings' in report_data:
+                        if 'total_potential_savings' in report_data and report_data['total_potential_savings'] is not None:
                             savings = report_data['total_potential_savings']
                             if savings > 500:
                                 insights["recommendations"].append({
@@ -557,7 +559,9 @@ class AnalyticsInsightsAgent(PluginInterface):
             })
         
         # Add agent-specific recommendations
-        recommendations.extend(agent_insights["recommendations"])
+        for rec in agent_insights["recommendations"]:
+            if "priority" in rec:
+                recommendations.append(rec)
         
         return recommendations
     
@@ -618,13 +622,15 @@ class AnalyticsInsightsAgent(PluginInterface):
             if high_priority:
                 f.write("### High Priority\n")
                 for rec in high_priority:
-                    f.write(f"- 🔴 **{rec['category']}**: {rec['action']}\n")
+                    if "category" in rec and "action" in rec:
+                        f.write(f"- 🔴 **{rec['category']}**: {rec['action']}\n")
                 f.write("\n")
             
             if medium_priority:
                 f.write("### Medium Priority\n")
                 for rec in medium_priority:
-                    f.write(f"- 🟡 **{rec['category']}**: {rec['action']}\n")
+                    if "category" in rec and "action" in rec:
+                        f.write(f"- 🟡 **{rec['category']}**: {rec['action']}\n")
                 f.write("\n")
             
             # Recent Activity

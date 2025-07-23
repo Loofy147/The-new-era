@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-21T19:06:20.691038",
+  "timestamp": "2025-07-23T01:20:39.687116",
   "total_monthly_cost": 2450.75,
   "cost_breakdown": {
     "compute": 1200.0,
@@ -12,19 +12,22 @@
       "category": "compute",
       "issue": "Over-provisioned EC2 instances",
       "potential_savings": 360.0,
-      "recommendation": "Right-size instances based on CPU utilization"
+      "recommendation": "Right-size instances based on CPU utilization",
+      "status": "In Progress"
     },
     {
       "category": "storage",
       "issue": "Unused EBS volumes",
       "potential_savings": 150.25,
-      "recommendation": "Delete unattached volumes and implement lifecycle policies"
+      "recommendation": "Delete unattached volumes and implement lifecycle policies",
+      "status": "Remediated"
     },
     {
       "category": "network",
       "issue": "High data transfer costs",
       "potential_savings": 120.0,
-      "recommendation": "Implement CloudFront CDN for static content"
+      "recommendation": "Implement CloudFront CDN for static content",
+      "status": "Not Started"
     }
   ],
   "total_potential_savings": 630.25,

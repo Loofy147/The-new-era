@@ -1,6 +1,6 @@
 # Security Remediation Plan
 
-Generated on: 2025-07-21 19:06:20
+Generated on: 2025-07-23 01:20:38
 Security Score: 0/100
 
 ## ⚠️ High Priority (Fix Within 7 Days)
@@ -18,15 +18,15 @@ Security Score: 0/100
 ## 📋 Medium Priority (Fix Within 30 Days)
 
 ### 1. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/architecture_optimizer.py
+- **File**: ./core/orchestrator/ai_orchestrator_architect.py
 - **Type**: weak_crypto
 
 ### 2. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/architecture_optimizer.py
+- **File**: ./core/orchestrator/ai_orchestrator_architect.py
 - **Type**: weak_crypto
 
 ### 3. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/architecture_optimizer.py
+- **File**: ./core/orchestrator/ai_orchestrator_architect.py
 - **Type**: weak_crypto
 
 ### 4. Weak cryptographic algorithm detected
@@ -82,23 +82,23 @@ Security Score: 0/100
 - **Type**: weak_crypto
 
 ### 17. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/workflow_designer.py
+- **File**: ./core/orchestrator/architecture_optimizer.py
 - **Type**: weak_crypto
 
 ### 18. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/workflow_designer.py
+- **File**: ./core/orchestrator/architecture_optimizer.py
 - **Type**: weak_crypto
 
 ### 19. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/ai_orchestrator_architect.py
+- **File**: ./core/orchestrator/architecture_optimizer.py
 - **Type**: weak_crypto
 
 ### 20. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/ai_orchestrator_architect.py
+- **File**: ./core/orchestrator/workflow_designer.py
 - **Type**: weak_crypto
 
 ### 21. Weak cryptographic algorithm detected
-- **File**: ./core/orchestrator/ai_orchestrator_architect.py
+- **File**: ./core/orchestrator/workflow_designer.py
 - **Type**: weak_crypto
 
 ### 22. Weak cryptographic algorithm detected

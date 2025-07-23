@@ -91,6 +91,13 @@ class AIOperatingSystem:
                     "timestamp": datetime.now().isoformat()
                 }
                 print(f"✅ {name} completed")
+            except KeyError as e:
+                print(f"❌ {name} failed with KeyError: {e}")
+                results[name] = {
+                    "status": "error",
+                    "error": f"KeyError: {e}",
+                    "timestamp": datetime.now().isoformat()
+                }
             except Exception as e:
                 print(f"❌ {name} failed: {e}")
                 results[name] = {

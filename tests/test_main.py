@@ -95,6 +95,21 @@ class TestSystemIntegration(unittest.TestCase):
             except Exception as e:
                 self.fail(f"Agent execution failed: {e}")
 
+    def test_run_all_agents_execution(self):
+        """Test the execution of all agents"""
+        ai_os = AIOperatingSystem()
+        ai_os.initialize()
+
+        # Should have agents registered
+        self.assertGreater(len(ai_os.agents), 0)
+
+        try:
+            results = ai_os.run_all_agents()
+            self.assertIsInstance(results, dict)
+            self.assertEqual(len(results), len(ai_os.agents))
+        except Exception as e:
+            self.fail(f"run_all_agents failed: {e}")
+
 if __name__ == '__main__':
     # Create reports directory for test outputs
     os.makedirs('reports', exist_ok=True)
