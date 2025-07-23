@@ -1,0 +1,78 @@
+{
+  "system": {
+    "name": "AI Operating System Framework",
+    "version": "1.0.0",
+    "environment": "production",
+    "log_level": "INFO",
+    "debug": false
+  },
+  "agents": {
+    "enabled": true,
+    "parallel_execution": false,
+    "timeout_seconds": 300,
+    "auto_restart": true,
+    "execution_order": [
+      "ArchitectureDesignerAgent",
+      "TestGenie", 
+      "InsightsBot",
+      "SecuBot",
+      "PrivacyGuard",
+      "ComplianceBot",
+      "CostOptBot",
+      "ModelRefactor",
+      "ConvDesignBot"
+    ]
+  },
+  "services": {
+    "prompt_memory": {
+      "enabled": true,
+      "host": "localhost",
+      "port": 5000,
+      "debug": false,
+      "storage_path": "services/prompt_memory/prompts.json",
+      "index_path": "services/prompt_memory/prompt_index.faiss"
+    }
+  },
+  "reporting": {
+    "enabled": true,
+    "output_directory": "reports",
+    "formats": ["json", "markdown"],
+    "retention_days": 30,
+    "auto_cleanup": true
+  },
+  "security": {
+    "secret_key": "CHANGE_ME_IN_PRODUCTION",
+    "session_timeout": 3600,
+    "max_login_attempts": 5,
+    "enable_csrf": true,
+    "enable_rate_limiting": true
+  },
+  "database": {
+    "type": "file",
+    "connection_string": "sqlite:///data/aimos.db",
+    "pool_size": 10,
+    "backup_enabled": true,
+    "backup_interval": 86400
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics_collection": true,
+    "health_check_interval": 60,
+    "alert_thresholds": {
+      "cpu_usage": 80,
+      "memory_usage": 85,
+      "disk_usage": 90
+    }
+  },
+  "cli": {
+    "enabled": true,
+    "default_command": "status",
+    "auto_update": false
+  },
+  "dashboard": {
+    "enabled": true,
+    "port": 3000,
+    "auto_refresh": 30,
+    "theme": "light"
+  }
+}

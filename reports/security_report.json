@@ -1,0 +1,231 @@
+{
+  "timestamp": "2025-07-23T01:20:38.332532",
+  "scan_type": "comprehensive",
+  "vulnerabilities": [
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 560,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "'nodes': self.architecture_graph.number_of_nodes(),"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 1300,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if self.architecture_graph.number_of_nodes() > 0:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 1301,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "complexity_score = 1.0 - min(1.0, self.architecture_graph.number_of_edges() / (self.architecture_graph.number_of_nodes() * 2))"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 316,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 1:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 319,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "total_possible_edges = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 319,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "total_possible_edges = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 376,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 1:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 379,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "# Identify critical nodes (high betweenness centrality)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 393,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 1:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 399,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "for node in graph.nodes():"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 404,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if temp_graph.number_of_nodes() > 0:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 415,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 2:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 422,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "spof_ratio = len(articulation_points) / graph.number_of_nodes()"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 436,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "nodes = graph.number_of_nodes()"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 457,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 1:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 537,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_nodes() <= 1:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 540,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "max_possible_connections = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 540,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "max_possible_connections = graph.number_of_nodes() * (graph.number_of_nodes() - 1)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/architecture_optimizer.py",
+      "line": 608,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if graph.number_of_edges() > graph.number_of_nodes() * 1.5:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/workflow_designer.py",
+      "line": 296,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "parallel_groups = self._group_parallel_nodes(template)"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/workflow_designer.py",
+      "line": 366,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "def _group_parallel_nodes(self, template: WorkflowTemplate) -> Dict[str, List[str]]:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./services/vector_search/vector_engine.py",
+      "line": 106,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "hash_value = hashlib.md5(hash_input).hexdigest()"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./services/vector_search/vector_engine.py",
+      "line": 358,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "prompt_id = hashlib.md5(f\"{content}_{datetime.now().isoformat()}\".encode()).hexdigest()"
+    },
+    {
+      "type": "debug_mode",
+      "severity": "high",
+      "file": "services/prompt_memory/app.py",
+      "description": "Flask debug mode enabled (potential information disclosure)",
+      "recommendation": "Disable debug mode in production"
+    },
+    {
+      "type": "missing_secret_key",
+      "severity": "high",
+      "file": "services/prompt_memory/app.py",
+      "description": "Flask app missing SECRET_KEY configuration",
+      "recommendation": "Add a strong, random SECRET_KEY"
+    }
+  ],
+  "security_score": 0,
+  "recommendations": [
+    {
+      "category": "Authentication",
+      "priority": "high",
+      "action": "Implement multi-factor authentication for admin accounts",
+      "implementation": "Use libraries like PyOTP for TOTP implementation"
+    },
+    {
+      "category": "Encryption",
+      "priority": "high",
+      "action": "Encrypt sensitive data at rest",
+      "implementation": "Use cryptography library with AES-256-GCM"
+    },
+    {
+      "category": "Logging",
+      "priority": "medium",
+      "action": "Implement comprehensive security logging",
+      "implementation": "Log authentication attempts, data access, and configuration changes"
+    },
+    {
+      "category": "Network Security",
+      "priority": "medium",
+      "action": "Implement rate limiting and CORS policies",
+      "implementation": "Use Flask-Limiter for rate limiting"
+    }
+  ]
+}

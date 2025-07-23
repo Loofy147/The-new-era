@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-07-23T01:20:38.528728",
+  "frameworks_checked": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS",
+    "SOX",
+    "ISO27001"
+  ],
+  "overall_score": 85,
+  "findings": [
+    {
+      "framework": "GDPR",
+      "category": "Data Protection",
+      "severity": "high",
+      "finding": "No explicit data retention policy found",
+      "recommendation": "Implement data retention and deletion policies",
+      "article": "Article 5(1)(e) - Storage limitation",
+      "status": "In Progress"
+    },
+    {
+      "framework": "GDPR",
+      "category": "Consent Management",
+      "severity": "medium",
+      "finding": "Consent tracking mechanism not implemented",
+      "recommendation": "Add consent management system for user data processing",
+      "article": "Article 7 - Conditions for consent",
+      "status": "In Progress"
+    },
+    {
+      "framework": "HIPAA",
+      "category": "Access Controls",
+      "severity": "critical",
+      "finding": "PHI access controls not properly configured",
+      "recommendation": "Implement role-based access controls for PHI",
+      "safeguard": "Administrative Safeguards \u00a7 164.308(a)(4)",
+      "status": "Remediated"
+    },
+    {
+      "framework": "HIPAA",
+      "category": "Encryption",
+      "severity": "high",
+      "finding": "Data encryption at rest not verified",
+      "recommendation": "Ensure all PHI is encrypted using FIPS 140-2 validated encryption",
+      "safeguard": "Technical Safeguards \u00a7 164.312(a)(2)(iv)",
+      "status": "Remediated"
+    },
+    {
+      "framework": "PCI-DSS",
+      "category": "Network Security",
+      "severity": "critical",
+      "finding": "Default passwords detected in configuration",
+      "recommendation": "Change all default passwords and implement strong password policy",
+      "requirement": "Requirement 2.1",
+      "status": "Remediated"
+    },
+    {
+      "framework": "PCI-DSS",
+      "category": "Data Protection",
+      "severity": "high",
+      "finding": "Cardholder data encryption not verified",
+      "recommendation": "Implement strong cryptography for cardholder data transmission",
+      "requirement": "Requirement 4.1",
+      "status": "In Progress"
+    },
+    {
+      "framework": "General Security",
+      "category": "Access Management",
+      "severity": "medium",
+      "finding": "Multi-factor authentication not enforced",
+      "recommendation": "Enable MFA for all administrative accounts",
+      "standard": "NIST SP 800-63B",
+      "status": "In Progress"
+    },
+    {
+      "framework": "General Security",
+      "category": "Logging",
+      "severity": "medium",
+      "finding": "Insufficient audit logging configuration",
+      "recommendation": "Implement comprehensive audit logging for all system events",
+      "standard": "ISO 27001 A.12.4.1",
+      "status": "In Progress"
+    }
+  ],
+  "total_findings": 8,
+  "critical_findings": 0
+}
