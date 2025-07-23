@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-23T01:20:38.241522",
+  "timestamp": "2025-07-23T01:46:34.097875",
   "code_analysis": {
     "architecture_assessment": {
       "architecture_style": "plugin-based",
@@ -155,9 +155,9 @@
       }
     },
     "code_metrics": {
-      "total_lines": 16240,
+      "total_lines": 16308,
       "total_files": 53,
-      "average_file_size": 306.41509433962267,
+      "average_file_size": 307.6981132075472,
       "complexity_distribution": {
         "low": 5,
         "medium": 6,
@@ -543,11 +543,11 @@
         },
         {
           "file_path": "./tests/test_main.py",
-          "lines_of_code": 67,
-          "functions": 11,
-          "classes": 3,
-          "complexity_score": 50,
-          "documentation_ratio": 0.27956989247311825
+          "lines_of_code": 135,
+          "functions": 21,
+          "classes": 4,
+          "complexity_score": 91,
+          "documentation_ratio": 0.22413793103448276
         },
         {
           "file_path": "./tests/test_integration.py",
@@ -627,7 +627,7 @@
     {
       "type": "file_size",
       "priority": "medium",
-      "description": "Found 32 large files that could be split",
+      "description": "Found 33 large files that could be split",
       "details": [
         {
           "file": "./main.py",
@@ -748,6 +748,10 @@
         {
           "file": "./tests/run_all_tests.py",
           "lines": 203
+        },
+        {
+          "file": "./tests/test_main.py",
+          "lines": 215
         },
         {
           "file": "./data/generate_datasets.py",

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-23T01:20:38.528728",
+  "timestamp": "2025-07-23T01:46:36.084017",
   "frameworks_checked": [
     "GDPR",
     "HIPAA",
@@ -7,7 +7,7 @@
     "SOX",
     "ISO27001"
   ],
-  "overall_score": 85,
+  "overall_score": 78,
   "findings": [
     {
       "framework": "GDPR",
@@ -15,8 +15,7 @@
       "severity": "high",
       "finding": "No explicit data retention policy found",
       "recommendation": "Implement data retention and deletion policies",
-      "article": "Article 5(1)(e) - Storage limitation",
-      "status": "In Progress"
+      "article": "Article 5(1)(e) - Storage limitation"
     },
     {
       "framework": "GDPR",
@@ -24,8 +23,7 @@
       "severity": "medium",
       "finding": "Consent tracking mechanism not implemented",
       "recommendation": "Add consent management system for user data processing",
-      "article": "Article 7 - Conditions for consent",
-      "status": "In Progress"
+      "article": "Article 7 - Conditions for consent"
     },
     {
       "framework": "HIPAA",
@@ -33,8 +31,7 @@
       "severity": "critical",
       "finding": "PHI access controls not properly configured",
       "recommendation": "Implement role-based access controls for PHI",
-      "safeguard": "Administrative Safeguards \u00a7 164.308(a)(4)",
-      "status": "Remediated"
+      "safeguard": "Administrative Safeguards \u00a7 164.308(a)(4)"
     },
     {
       "framework": "HIPAA",
@@ -42,8 +39,7 @@
       "severity": "high",
       "finding": "Data encryption at rest not verified",
       "recommendation": "Ensure all PHI is encrypted using FIPS 140-2 validated encryption",
-      "safeguard": "Technical Safeguards \u00a7 164.312(a)(2)(iv)",
-      "status": "Remediated"
+      "safeguard": "Technical Safeguards \u00a7 164.312(a)(2)(iv)"
     },
     {
       "framework": "PCI-DSS",
@@ -51,8 +47,7 @@
       "severity": "critical",
       "finding": "Default passwords detected in configuration",
       "recommendation": "Change all default passwords and implement strong password policy",
-      "requirement": "Requirement 2.1",
-      "status": "Remediated"
+      "requirement": "Requirement 2.1"
     },
     {
       "framework": "PCI-DSS",
@@ -60,8 +55,7 @@
       "severity": "high",
       "finding": "Cardholder data encryption not verified",
       "recommendation": "Implement strong cryptography for cardholder data transmission",
-      "requirement": "Requirement 4.1",
-      "status": "In Progress"
+      "requirement": "Requirement 4.1"
     },
     {
       "framework": "General Security",
@@ -69,8 +63,7 @@
       "severity": "medium",
       "finding": "Multi-factor authentication not enforced",
       "recommendation": "Enable MFA for all administrative accounts",
-      "standard": "NIST SP 800-63B",
-      "status": "In Progress"
+      "standard": "NIST SP 800-63B"
     },
     {
       "framework": "General Security",
@@ -78,10 +71,9 @@
       "severity": "medium",
       "finding": "Insufficient audit logging configuration",
       "recommendation": "Implement comprehensive audit logging for all system events",
-      "standard": "ISO 27001 A.12.4.1",
-      "status": "In Progress"
+      "standard": "ISO 27001 A.12.4.1"
     }
   ],
   "total_findings": 8,
-  "critical_findings": 0
+  "critical_findings": 2
 }
