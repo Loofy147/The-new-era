@@ -12,22 +12,19 @@
       "category": "compute",
       "issue": "Over-provisioned EC2 instances",
       "potential_savings": 360.0,
-      "recommendation": "Right-size instances based on CPU utilization",
-      "status": "In Progress"
+      "recommendation": "Right-size instances based on CPU utilization"
     },
     {
       "category": "storage",
       "issue": "Unused EBS volumes",
       "potential_savings": 150.25,
-      "recommendation": "Delete unattached volumes and implement lifecycle policies",
-      "status": "Remediated"
+      "recommendation": "Delete unattached volumes and implement lifecycle policies"
     },
     {
       "category": "network",
       "issue": "High data transfer costs",
       "potential_savings": 120.0,
-      "recommendation": "Implement CloudFront CDN for static content",
-      "status": "Not Started"
+      "recommendation": "Implement CloudFront CDN for static content"
     }
   ],
   "total_potential_savings": 630.25,
