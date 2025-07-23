@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-21T19:06:21.163948",
+  "timestamp": "2025-07-23T01:20:39.829636",
   "executive_summary": {
     "current_state": "Plugin-based microservices architecture with good modularity",
     "target_state": "Cloud-native, event-driven architecture with auto-scaling",
@@ -49,6 +49,16 @@
     "components": {
       "core_components": [
         {
+          "name": "enhanced_plugin_manager",
+          "type": "Core Module",
+          "responsibility": "Handles enhanced plugin manager functionality"
+        },
+        {
+          "name": "enhanced_plugin_interface",
+          "type": "Core Module",
+          "responsibility": "Handles enhanced plugin interface functionality"
+        },
+        {
           "name": "config_manager",
           "type": "Core Module",
           "responsibility": "Handles configuration management"
@@ -59,16 +69,6 @@
           "responsibility": "Defines plugin contract and interface"
         },
         {
-          "name": "enhanced_plugin_interface",
-          "type": "Core Module",
-          "responsibility": "Handles enhanced plugin interface functionality"
-        },
-        {
-          "name": "enhanced_plugin_manager",
-          "type": "Core Module",
-          "responsibility": "Handles enhanced plugin manager functionality"
-        },
-        {
           "name": "plugin_manager",
           "type": "Core Module",
           "responsibility": "Manages plugin lifecycle and discovery"
@@ -76,14 +76,9 @@
       ],
       "agents": [
         {
-          "name": "sample_plugin",
+          "name": "model_refactor_agent",
           "type": "AI Agent",
-          "responsibility": "Handles sample plugin functionality"
-        },
-        {
-          "name": "multimodal_agent",
-          "type": "AI Agent",
-          "responsibility": "Handles multimodal agent functionality"
+          "responsibility": "Refactors and optimizes code"
         },
         {
           "name": "insights_agent",
@@ -91,34 +86,9 @@
           "responsibility": "Generates analytics and insights"
         },
         {
-          "name": "cost_optimization_agent",
-          "type": "AI Agent",
-          "responsibility": "Analyzes and optimizes infrastructure costs"
-        },
-        {
-          "name": "compliance_agent",
-          "type": "AI Agent",
-          "responsibility": "Ensures regulatory compliance"
-        },
-        {
-          "name": "voice_agent",
-          "type": "AI Agent",
-          "responsibility": "Handles voice agent functionality"
-        },
-        {
           "name": "security_agent",
           "type": "AI Agent",
           "responsibility": "Performs security analysis and hardening"
-        },
-        {
-          "name": "model_refactor_agent",
-          "type": "AI Agent",
-          "responsibility": "Refactors and optimizes code"
-        },
-        {
-          "name": "testing_agent",
-          "type": "AI Agent",
-          "responsibility": "Automates testing and quality assurance"
         },
         {
           "name": "brainstorming_agent",
@@ -126,9 +96,39 @@
           "responsibility": "Handles brainstorming agent functionality"
         },
         {
+          "name": "compliance_agent",
+          "type": "AI Agent",
+          "responsibility": "Ensures regulatory compliance"
+        },
+        {
+          "name": "privacy_agent",
+          "type": "AI Agent",
+          "responsibility": "Manages data privacy and protection"
+        },
+        {
+          "name": "multimodal_agent",
+          "type": "AI Agent",
+          "responsibility": "Handles multimodal agent functionality"
+        },
+        {
+          "name": "cost_optimization_agent",
+          "type": "AI Agent",
+          "responsibility": "Analyzes and optimizes infrastructure costs"
+        },
+        {
           "name": "conversation_design_agent",
           "type": "AI Agent",
           "responsibility": "Designs conversational interfaces"
+        },
+        {
+          "name": "sample_plugin",
+          "type": "AI Agent",
+          "responsibility": "Handles sample plugin functionality"
+        },
+        {
+          "name": "testing_agent",
+          "type": "AI Agent",
+          "responsibility": "Automates testing and quality assurance"
         },
         {
           "name": "architecture_agent",
@@ -136,21 +136,21 @@
           "responsibility": "Designs system architecture"
         },
         {
-          "name": "privacy_agent",
+          "name": "voice_agent",
           "type": "AI Agent",
-          "responsibility": "Manages data privacy and protection"
+          "responsibility": "Handles voice agent functionality"
         }
       ],
       "services": [
         {
-          "name": "vector_search",
-          "type": "Microservice",
-          "responsibility": "Provides vector search functionality"
-        },
-        {
           "name": "prompt_memory",
           "type": "Microservice",
           "responsibility": "Stores and retrieves AI prompts"
+        },
+        {
+          "name": "vector_search",
+          "type": "Microservice",
+          "responsibility": "Provides vector search functionality"
         }
       ],
       "utilities": [],

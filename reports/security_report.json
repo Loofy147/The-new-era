@@ -1,7 +1,31 @@
 {
-  "timestamp": "2025-07-21T19:06:20.693425",
+  "timestamp": "2025-07-23T01:20:38.332532",
   "scan_type": "comprehensive",
   "vulnerabilities": [
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 560,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "'nodes': self.architecture_graph.number_of_nodes(),"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 1300,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "if self.architecture_graph.number_of_nodes() > 0:"
+    },
+    {
+      "type": "weak_crypto",
+      "severity": "medium",
+      "file": "./core/orchestrator/ai_orchestrator_architect.py",
+      "line": 1301,
+      "description": "Weak cryptographic algorithm detected",
+      "code_snippet": "complexity_score = 1.0 - min(1.0, self.architecture_graph.number_of_edges() / (self.architecture_graph.number_of_nodes() * 2))"
+    },
     {
       "type": "weak_crypto",
       "severity": "medium",
@@ -145,30 +169,6 @@
       "line": 366,
       "description": "Weak cryptographic algorithm detected",
       "code_snippet": "def _group_parallel_nodes(self, template: WorkflowTemplate) -> Dict[str, List[str]]:"
-    },
-    {
-      "type": "weak_crypto",
-      "severity": "medium",
-      "file": "./core/orchestrator/ai_orchestrator_architect.py",
-      "line": 560,
-      "description": "Weak cryptographic algorithm detected",
-      "code_snippet": "'nodes': self.architecture_graph.number_of_nodes(),"
-    },
-    {
-      "type": "weak_crypto",
-      "severity": "medium",
-      "file": "./core/orchestrator/ai_orchestrator_architect.py",
-      "line": 1300,
-      "description": "Weak cryptographic algorithm detected",
-      "code_snippet": "if self.architecture_graph.number_of_nodes() > 0:"
-    },
-    {
-      "type": "weak_crypto",
-      "severity": "medium",
-      "file": "./core/orchestrator/ai_orchestrator_architect.py",
-      "line": 1301,
-      "description": "Weak cryptographic algorithm detected",
-      "code_snippet": "complexity_score = 1.0 - min(1.0, self.architecture_graph.number_of_edges() / (self.architecture_graph.number_of_nodes() * 2))"
     },
     {
       "type": "weak_crypto",
