@@ -69,7 +69,7 @@ email-validator==2.1.0
 slowapi==0.1.9
 
 # CORS and middleware
-starlette==0.40.0
+starlette==0.47.2
 
 # File operations
 aiofiles==23.2.1
