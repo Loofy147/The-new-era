@@ -86,7 +86,7 @@ jsonschema==4.20.0
 # Machine Learning (optional for advanced features)
 scikit-learn==1.5.0
 tensorflow==2.15.0
-torch==2.7.1
+torch==2.8.0
 
 # Vector database support
 chromadb==0.4.18
@@ -94,7 +94,7 @@ faiss-cpu==1.7.4
 
 # NLP and embeddings
 sentence-transformers==2.2.2
-transformers==4.52.1
+transformers==4.53.0
 
 # Data serialization
 msgpack==1.0.7
